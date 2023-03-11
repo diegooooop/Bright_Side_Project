@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/love"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/cool"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="How are you feeling today?"
+        android:textColor="#C8FF9800"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/happy"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/nervous"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/angry"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="218dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/sad"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="121dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
