@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 private lateinit var btn: Button
 private lateinit var userName: EditText
@@ -38,6 +39,9 @@ class SecondaryActivity : AppCompatActivity() {
                 if(!userName.text.toString().isNullOrBlank()) {
                     val i = Intent(this.applicationContext, MainActivity::class.java)
                     startActivity(i)
+                }
+                else{
+                    Toast.makeText(applicationContext,"Please Enter Your Name", Toast.LENGTH_SHORT).show()
                 }
             })
 

@@ -21,9 +21,6 @@
             android:name=".NewEntryActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomePage"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
