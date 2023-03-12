@@ -3,64 +3,102 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/love"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="291dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="20dp">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/cool"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="291dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="How are you feeling today?"
+            android:textColor="#C8FF9800"
+            android:textSize="48sp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/rubik_medium"
-        android:text="How are you feeling today?"
-        android:textColor="#C8FF9800"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="25dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/happy"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="121dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/nervous"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="458dp" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitEnd"
+                    app:srcCompat="@drawable/angry" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/angry"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="458dp" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/happy" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="218dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/sad"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="121dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/anxious" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/confused" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/disgusted" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cool" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

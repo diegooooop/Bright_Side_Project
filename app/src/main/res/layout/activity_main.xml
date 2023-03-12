@@ -29,4 +29,12 @@
         app:layout_constraintTop_toBottomOf="@id/NameTv"
         tools:srcCompat="@drawable/icon_logo" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="442dp"
+        android:layout_height="542dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="173dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
