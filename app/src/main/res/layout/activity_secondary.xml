@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple"
-    android:padding="10dp"
-    tools:context=".WelcomePage">
+    tools:context=".SecondaryActivity">
 
     <LinearLayout
         android:id="@+id/Ll1"
