@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/GreetingTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gavity="center"
+        android:layout_marginTop="80dp"
+        android:text="Hi! (name)"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DescriptionTv"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_gavity="center"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:lineSpacingExtra="4sp"
+        android:text="The goal of the application is to promote self-awareness and improve one’s well being by enabling users to reflect on their mood progress throughout the week. By allowing users to gain insights of their current mood and wellbeing, it can promote healthy habits, and provide better understanding of their emotions. It allows users to see their mood patterns and identify factors that affect their emotions. In essence, with these goals in mind, the application will improve users’ mental health and their overall quality of life."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GreetingTv" />
+
+    <Button
+        android:id="@+id/letsgoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Let's go"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
