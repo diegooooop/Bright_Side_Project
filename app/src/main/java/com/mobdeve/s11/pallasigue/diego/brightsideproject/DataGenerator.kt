@@ -7,9 +7,7 @@ class DataGenerator {
                 data.add(MoodModel(
                     "Happy",
                     R.drawable.happy,
-                    adjectives = arrayOf<String>("Joyful", "Cheerful", "Delighted", "Pleased", "Ecstatic", "Blissful", "Elated", "Grateful", "Content", "Overjoyed"),
-                    textColor =
-                ))
+                    adjectives = arrayOf<String>("Joyful", "Cheerful", "Delighted", "Pleased", "Ecstatic", "Blissful", "Elated", "Grateful", "Content", "Overjoyed")))
                 data.add(MoodModel(
                     "Sad",
                     R.drawable.sad,
@@ -42,4 +40,3 @@ class DataGenerator {
             }
         }
     }
-}
