@@ -1,4 +1,3 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
-class AffirmationModel {
-}
+class AffirmationModel (val imageId: Array<String>)
