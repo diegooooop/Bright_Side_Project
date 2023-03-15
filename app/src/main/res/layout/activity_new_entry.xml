@@ -22,126 +22,13 @@
             android:gravity="center"
             android:text="How are you feeling today?"
             android:textColor="#C8FF9800"
-            android:textSize="34sp" />
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/ib_angry"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#FEE4CE"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/angry" />
-
-                <ImageButton
-                    android:id="@+id/ib_happy"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#F7E9CC"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/happy" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/ib_anxious"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#F2F6F9"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/anxious" />
-
-                <ImageButton
-                    android:id="@+id/ib_confused"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#C6E0F7"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/confused" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/ib_inlove"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#FEF8C6"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/inlove" />
-
-                <ImageButton
-                    android:id="@+id/ib_bored"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#F6CCCF"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/bored" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/ib_nervous"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#F7F0FE"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/nervous" />
-
-                <ImageButton
-                    android:id="@+id/ib_sad"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#D9ECFB"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/sad" />
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
