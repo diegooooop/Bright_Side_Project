@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:circularflow_defaultRadius="10dp">
+
 
     <LinearLayout
         android:id="@+id/ll_moodBox"
@@ -23,6 +25,8 @@
             android:layout_width="47dp"
             android:layout_height="53dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/confused" />
 
         <TextView

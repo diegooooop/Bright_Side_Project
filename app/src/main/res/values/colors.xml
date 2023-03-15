@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="yellow">#FFED75</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="gray">#B3B3B3</color>
-    <color name="purple">#D9DAFC</color>
+<!--    <color name="happy_yellow">#F8EACD</color>-->
+<!--    <color name="happy_darkyellow">#FFB751</color>-->
+
+<!--    <color name="sad_blue">#DAEDFC</color>-->
+<!--    <color name="sad_darkblue">#7BBCFC</color>-->
+
+<!--    <color name="inlove_yellow">#DAEDFC</color>-->
+<!--    <color name="inlove_darkyellow">#FEB651</color>-->
+
+<!--    <color name="nervous_purple">#DAEDFC</color>-->
+<!--    <color name="nervous_darkpurple">#7078A6</color>-->
+
+<!--    <color name="angry_red">#DAEDFC</color>-->
+<!--    <color name="angry_darkred">#7078A6</color>-->
 </resources>
