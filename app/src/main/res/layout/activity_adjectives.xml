@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp">
+    tools:context=".Adjectives">
 
     <LinearLayout
-        android:id="@+id/ll_moodlist"
+        android:id="@+id/ll_adjectivelist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,23 +17,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_entry_title"
+            android:id="@+id/tv_adjective_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/rubik_light"
-            android:gravity="center"
-            android:text="How are you feeling today?"
-            android:textColor="#C8FF9800"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:text="TextView" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_adjective"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

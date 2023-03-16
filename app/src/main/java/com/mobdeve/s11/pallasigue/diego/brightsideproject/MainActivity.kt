@@ -1,14 +1,10 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_entry)
 
-        this.recyclerView = findViewById(R.id.recyclerView)
+        this.recyclerView = findViewById(R.id.rv_adjective)
         this.recyclerView.adapter = AdapterMood(this.mood)
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
