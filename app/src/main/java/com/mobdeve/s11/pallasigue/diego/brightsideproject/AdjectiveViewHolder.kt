@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 class AdjectiveViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val adjective: Button = itemView.findViewById(R.id.btn_adjective)
 
-    var i = 0;
-    fun bindData(data: MoodModel)
+    fun bindData(data: String)
     {
-        adjective.text = data.adjectives[i]
-        i += 1
+        adjective.text = data
     }
 }
