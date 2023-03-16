@@ -2,7 +2,7 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 class WeeklyDataGenerator {
     companion object {
-        fun loadData() {
+        fun loadData(): ArrayList<WeeklyModel>{
             val data = ArrayList<WeeklyModel>()
             data.add(
                 WeeklyModel(
@@ -53,6 +53,7 @@ class WeeklyDataGenerator {
                     R.drawable.angry,
                     adjectives = arrayOf<String>("Seething", "Enraged", "Fuming"),
                     "It's Monday again tomorrow!"))
+            return data
         }
     }
 }

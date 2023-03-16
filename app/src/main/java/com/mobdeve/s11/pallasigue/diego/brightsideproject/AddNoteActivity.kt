@@ -17,7 +17,6 @@ class AddNoteActivity : AppCompatActivity() {
         confirmBtn.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, HomePageActivity::class.java)
             startActivity(i)
-            finish()
         })
     }
 }

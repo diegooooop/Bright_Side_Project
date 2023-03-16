@@ -25,8 +25,7 @@ class HomePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
 
         //generate affirmation array
-        val affirmation = intArrayOf(R.drawable.affirmation1,R.drawable.affirmation2,R.drawable.affirmation3,
-            R.drawable.affirmation4,R.drawable.affirmation5)
+        val affirmation = intArrayOf(R.drawable.affirmation1,R.drawable.affirmation2,R.drawable.affirmation3)
 
         //generate random number
         val num = Random.nextInt(0,5)
