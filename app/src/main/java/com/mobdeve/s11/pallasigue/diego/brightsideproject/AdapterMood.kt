@@ -26,7 +26,6 @@ class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: MoodViewHolder, position: Int) {
         holder.bindData(data[position])
-
     }
 
     override fun getItemCount(): Int {
