@@ -68,6 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Log your mood"
+            android:backgroundTint="#C8FF9800"
             android:textAlignment="center" />
 
         <Button
@@ -76,6 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Your week so far"
+            android:backgroundTint="#C8FF9800"
             android:textAlignment="center" />
 
         <Button
@@ -84,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="See all my logs"
+            android:backgroundTint="#C8FF9800"
             android:textAlignment="center" />
 
     </LinearLayout>
