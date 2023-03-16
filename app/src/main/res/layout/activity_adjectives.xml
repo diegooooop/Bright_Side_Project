@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="#C8FF9800"
+            android:backgroundTint="#2BB336"
             android:text="Confirm" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
