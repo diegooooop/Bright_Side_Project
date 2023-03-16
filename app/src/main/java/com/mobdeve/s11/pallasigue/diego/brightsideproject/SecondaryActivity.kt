@@ -51,7 +51,8 @@ class SecondaryActivity : AppCompatActivity() {
 
         private fun moveToSecondary() {
             // use an intent to travel from one activity to another.
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomePageActivity::class.java)
+            intent.putExtra("name", userName.text)
             startActivity(intent)
         }
     }

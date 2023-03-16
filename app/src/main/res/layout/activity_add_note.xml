@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    tools:context=".AddNote">
+    tools:context=".AddNoteActivity">
 
     <LinearLayout
         android:id="@+id/ll_notes"

@@ -63,20 +63,20 @@
 
         <ImageView
             android:id="@+id/affirmationIv"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="10dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            app:srcCompat="@drawable/affirmation1" />
 
         <Button
             android:id="@+id/moodBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FF9800"
+            android:backgroundTint="#C8FDD394"
             android:text="Log your mood"
             android:textAlignment="center" />
 
@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FF9800"
+            android:backgroundTint="#C8FDD394"
             android:text="Your week so far"
             android:textAlignment="center" />
 
@@ -94,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FF9800"
+            android:backgroundTint="#C8FDD394"
             android:text="See all my logs"
             android:textAlignment="center" />
 
