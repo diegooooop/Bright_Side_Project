@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF">
 
-    <Button
+    <CheckBox
         android:id="@+id/btn_adjective"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,10 +15,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
-        android:backgroundTint="#C8FF9800"
+        android:buttonTint="@color/green"
+        android:clickable="true"
+        android:drawableTint="#2BB336"
+        android:enabled="true"
         android:text="Excited"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="15dip"
+        android:textColor="#C8000000"
+        app:buttonIconTint="#2BB336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
