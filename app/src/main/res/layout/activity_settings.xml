@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/dailyreminderLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/setreminderTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/rubik_light"
+            android:gravity="center"
+            android:text="Do you want to set a daily reminder?"
+            android:textColor="#C8FF9800"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/settimeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_light"
+            android:gravity="center"
+            android:text="Set Daily Reminder Time"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/timeEt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="time" />
+
+        <CheckBox
+            android:id="@+id/dontremindCb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_light"
+            android:layout_gravity="center"
+            android:text="No, don't remind me"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/confirmnotifBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="createNotification"
+                android:text="confirm" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
