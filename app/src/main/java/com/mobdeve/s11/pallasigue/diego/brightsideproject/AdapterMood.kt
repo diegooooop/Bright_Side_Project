@@ -18,6 +18,7 @@ class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<
             val i = Intent(myViewHolder.itemView.context, Adjectives::class.java)
             i.putExtra("Name", data[myViewHolder.adapterPosition].name)
             i.putExtra("Adjectives", data[myViewHolder.adapterPosition].adjectives)
+            i.putExtra("Color", data[myViewHolder.adapterPosition].color)
             myViewHolder.itemView.context.startActivity(i)
         }
 

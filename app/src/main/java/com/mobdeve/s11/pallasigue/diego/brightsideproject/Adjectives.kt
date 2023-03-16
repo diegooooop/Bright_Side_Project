@@ -21,15 +21,13 @@ class Adjectives : AppCompatActivity()
         nameTV = findViewById(R.id.tv_adjective_title)
         val name = intent.getStringExtra("Name")
         val i = intent.getStringArrayExtra("Adjectives")
-
+        val color = intent.getIntExtra("Color", 0)
         nameTV.text = name
 
 
         this.recyclerView = findViewById(R.id.rv_adjective)
-        this.recyclerView.adapter = i?.let { AdapterAdjectives(it) }
+        this.recyclerView.adapter = i?.let { AdapterAdjectives(it, color) }
 
         this.recyclerView.layoutManager = GridLayoutManager(getActivity(applicationContext), 2)
-//            LinearLayoutManager(this)
-//        topicListView.setLayoutManager(GridLayoutManager(getActivity(), 3))
     }
 }

@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterAdjectives(private val data: Array<String>): RecyclerView.Adapter<AdjectiveViewHolder>() {
+class AdapterAdjectives(private val data: Array<String> , private val color: Int): RecyclerView.Adapter<AdjectiveViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdjectiveViewHolder{
         val inflater = LayoutInflater.from(parent.context)
@@ -13,7 +13,7 @@ class AdapterAdjectives(private val data: Array<String>): RecyclerView.Adapter<A
     }
 
     override fun onBindViewHolder(holder: AdjectiveViewHolder, position: Int) {
-        holder.bindData(data[position])
+        holder.bindData(data[position], color)
     }
 
     override fun getItemCount(): Int {
