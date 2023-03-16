@@ -12,6 +12,12 @@
         android:theme="@style/Theme.BrightSideProject"
         tools:targetApi="31">
         <activity
+            android:name=".AllLogsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DailyMoods"
+            android:exported="false" />
+        <activity
             android:name=".WeeklySummaryActivity"
             android:exported="false" />
         <activity
