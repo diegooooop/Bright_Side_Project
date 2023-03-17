@@ -2,7 +2,7 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import android.graphics.Color
 
-class WeeklyDataGenerator {
+class AlltimeDataGenerator {
     companion object {
         fun loadData(): ArrayList<EntryModel>{
             val data = ArrayList<EntryModel>()
@@ -51,4 +51,3 @@ class WeeklyDataGenerator {
             return data
         }
     }
-}

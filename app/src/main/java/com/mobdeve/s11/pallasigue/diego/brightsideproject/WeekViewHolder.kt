@@ -13,7 +13,7 @@ class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val notes: TextView = itemView.findViewById(R.id.tv_notes)
     private val bgcolor: LinearLayout = itemView.findViewById(R.id.ll_daysummary)
 
-    fun bindData(data: WeeklyModel)
+    fun bindData(data: EntryModel)
     {
         mood.setImageResource(data.model.imageId)
         day.text = data.day

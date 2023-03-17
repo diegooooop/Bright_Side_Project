@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class WeeklySummaryActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private val week: ArrayList<WeeklyModel> = WeeklyDataGenerator.loadData()
+    private val week: ArrayList<EntryModel> = WeeklyDataGenerator.loadData()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weekly_summary)
