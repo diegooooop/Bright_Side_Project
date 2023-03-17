@@ -17,19 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-<<<<<<< HEAD
-    <TextView
-        android:id="@+id/tv_week_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="YOUR WEEK SO FAR"
-        android:textColor="#C8FF9800"
-        android:textStyle="bold"
-        android:textSize="28sp" />
-=======
         <TextView
             android:id="@+id/tv_week_title"
             android:layout_width="match_parent"
@@ -40,7 +27,6 @@
             android:text="Your week so far..."
             android:textColor="#C8FF9800"
             android:textSize="34sp" />
->>>>>>> 857de4097fd68c32f386b5a14510838ba83756df
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_days"
