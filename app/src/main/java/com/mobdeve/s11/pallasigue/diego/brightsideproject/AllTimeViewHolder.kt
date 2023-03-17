@@ -17,7 +17,7 @@ class AllTimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)  {
     fun bindData(data: EntryModel)
     {
         mood.setImageResource(data.model.imageId)
-        moodText.text = "You are " + data.model.name
+        moodText.text = data.model.name
         day.text = data.day
         adjective.text = data.model.adjectives.toString()
         notes.text = data.notes
