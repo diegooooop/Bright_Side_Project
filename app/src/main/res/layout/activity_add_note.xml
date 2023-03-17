@@ -23,8 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:fontFamily="@font/rubik"
             android:text="Notes for Today"
-            android:textColor="#C8FF9800"
+            android:textColor="@color/yellow"
             android:textSize="34sp" />
 
         <EditText
@@ -35,6 +36,7 @@
             android:layout_marginBottom="50dp"
             android:ems="15"
             android:gravity="center"
+            android:fontFamily="@font/rubik_light"
             android:hint="Enter your notes here"
             android:inputType="textMultiLine" />
 
@@ -43,8 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/rubik"
             android:text="Submit"
-            android:textColor="#FFFFFF" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

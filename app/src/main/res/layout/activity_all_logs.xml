@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:textColor="#C8FF9800"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/yellow"
             android:text="All-time data"
             android:textSize="34sp" />
 
@@ -37,6 +38,7 @@
                 android:id="@+id/tv_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
                 android:text="Month" />
 
             <Spinner
@@ -51,6 +53,7 @@
                 android:id="@+id/tv_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
                 android:text="Year" />
 
             <Spinner

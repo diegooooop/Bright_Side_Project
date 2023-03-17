@@ -81,11 +81,11 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/yellow"
             android:padding="15dp"
+            android:fontFamily="@font/rubik_bold"
             android:text="Log your mood"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,10 +101,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/blue"
                 android:padding="15dp"
+                android:fontFamily="@font/rubik_bold"
                 android:text="Weekly Report"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white" />
 
             <Button
                 android:id="@+id/logsBtn"
@@ -115,10 +115,10 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/purple"
                 android:padding="15dp"
+                android:fontFamily="@font/rubik_bold"
                 android:text="See all logs"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </LinearLayout>

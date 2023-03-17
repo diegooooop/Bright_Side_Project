@@ -20,6 +20,7 @@
         android:drawableTint="#2BB336"
         android:enabled="true"
         android:gravity="center"
+        android:fontFamily="@font/rubik"
         android:text="Excited"
         android:textColor="#C8000000"
         app:buttonIconTint="#C8FF9800"
