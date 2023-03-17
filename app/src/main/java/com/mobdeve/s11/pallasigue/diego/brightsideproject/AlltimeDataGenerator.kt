@@ -2,10 +2,16 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import android.graphics.Color
 
-class WeeklyDataGenerator {
+class AlltimeDataGenerator {
     companion object {
         fun loadData(): ArrayList<EntryModel>{
             val data = ArrayList<EntryModel>()
+            data.add(
+                EntryModel(
+                    "March 5, 2023 - Sunday",
+                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
+                        color = Color.parseColor("#F3F7FA")),
+                    "I have not prepared for my exam this Monday"))
             data.add(
                 EntryModel(
                     "March 6, 2023 - Monday",
@@ -50,5 +56,9 @@ class WeeklyDataGenerator {
                     "It's Monday again tomorrow!"))
             return data
         }
+<<<<<<< HEAD
     }
 }
+=======
+    }}
+>>>>>>> f5db0955df962569337490fef82d2c43d6e21d67

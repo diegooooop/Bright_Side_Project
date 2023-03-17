@@ -53,6 +53,10 @@ class HomePageActivity : AppCompatActivity() {
         })
 
         logBtn = findViewById(R.id.logsBtn)
+        logBtn.setOnClickListener(View.OnClickListener {
+            val i = Intent(applicationContext, AllLogsActivity::class.java)
+            startActivity(i)
+        })
 
     }
 }
