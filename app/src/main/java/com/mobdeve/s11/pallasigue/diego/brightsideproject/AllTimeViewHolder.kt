@@ -6,7 +6,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class AllTimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)  {
     private val mood: ImageView = itemView.findViewById(R.id.iv_mood)
     private val day: TextView = itemView.findViewById(R.id.tv_day)
     private val adjective: TextView = itemView.findViewById(R.id.tv_adjectives)
@@ -17,7 +17,7 @@ class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun bindData(data: EntryModel)
     {
         mood.setImageResource(data.model.imageId)
-        moodText.text = "You are" + data.model.name
+        moodText.text = "You are " + data.model.name
         day.text = data.day
         adjective.text = data.model.adjectives.toString()
         notes.text = data.notes

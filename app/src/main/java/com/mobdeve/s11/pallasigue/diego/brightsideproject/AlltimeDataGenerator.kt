@@ -8,6 +8,12 @@ class AlltimeDataGenerator {
             val data = ArrayList<EntryModel>()
             data.add(
                 EntryModel(
+                    "March 5, 2023 - Sunday",
+                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
+                        color = Color.parseColor("#F3F7FA")),
+                    "I have not prepared for my exam this Monday"))
+            data.add(
+                EntryModel(
                     "March 6, 2023 - Monday",
                     MoodModel("Anxious", R.drawable.nervous, adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
                         color = Color.parseColor("#F3F7FA")),
@@ -51,3 +57,4 @@ class AlltimeDataGenerator {
             return data
         }
     }
+}
