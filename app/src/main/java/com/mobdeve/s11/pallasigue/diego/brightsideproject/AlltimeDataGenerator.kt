@@ -56,5 +56,9 @@ class AlltimeDataGenerator {
                     "It's Monday again tomorrow!"))
             return data
         }
+<<<<<<< HEAD
     }
 }
+=======
+    }}
+>>>>>>> f5db0955df962569337490fef82d2c43d6e21d67
