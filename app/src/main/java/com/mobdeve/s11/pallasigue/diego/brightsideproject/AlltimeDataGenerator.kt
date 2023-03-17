@@ -50,4 +50,4 @@ class AlltimeDataGenerator {
                     "It's Monday again tomorrow!"))
             return data
         }
-    }
+    }}
