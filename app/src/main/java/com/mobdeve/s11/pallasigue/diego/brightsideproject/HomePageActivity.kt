@@ -32,7 +32,7 @@ class HomePageActivity : AppCompatActivity() {
         val affirmation = intArrayOf(R.drawable.affirmation1,R.drawable.affirmation2,R.drawable.affirmation3)
 
         //generate random number
-        val num = Random.nextInt(0,2)
+        val num = Random.nextInt(0,3)
 
         //set the greetings to the username given
         homeName = findViewById(R.id.tv_home_name)
