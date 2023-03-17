@@ -24,7 +24,7 @@
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddNote"
+            android:name=".AddNoteActivity"
             android:exported="false" />
         <activity
             android:name=".Adjectives"

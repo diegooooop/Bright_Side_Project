@@ -37,7 +37,8 @@ class SecondaryActivity : AppCompatActivity() {
             userName = findViewById(R.id.nameEt)
             btn.setOnClickListener(View.OnClickListener {
                 if(!userName.text.toString().isNullOrBlank()) {
-                    val i = Intent(this.applicationContext, MainActivity::class.java)
+                    val i = Intent(this.applicationContext, HomePageActivity::class.java)
+                    i.putExtra("name", userName.text)
                     startActivity(i)
                 }
                 else{
@@ -50,7 +51,8 @@ class SecondaryActivity : AppCompatActivity() {
 
         private fun moveToSecondary() {
             // use an intent to travel from one activity to another.
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomePageActivity::class.java)
+            intent.putExtra("name", userName.text)
             startActivity(intent)
         }
     }

@@ -33,9 +33,9 @@
             android:id="@+id/rv_adjective"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_margin="5dp"
-            android:foregroundGravity="center">
+            android:foregroundGravity="left">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#2BB336"
-            android:text="Confirm" />
+            android:text="Confirm"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

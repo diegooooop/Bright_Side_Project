@@ -16,6 +16,5 @@ class AdjectiveViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun bindData(data: String , color: Int)
     {
         adjective.text = data
-        adjective.setBackgroundColor(color)
     }
 }
