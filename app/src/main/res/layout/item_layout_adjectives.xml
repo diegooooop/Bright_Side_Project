@@ -9,7 +9,7 @@
 
     <CheckBox
         android:id="@+id/btn_adjective"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
@@ -19,6 +19,7 @@
         android:clickable="true"
         android:drawableTint="#2BB336"
         android:enabled="true"
+        android:gravity="center"
         android:text="Excited"
         android:textColor="#C8000000"
         app:buttonIconTint="#C8FF9800"
