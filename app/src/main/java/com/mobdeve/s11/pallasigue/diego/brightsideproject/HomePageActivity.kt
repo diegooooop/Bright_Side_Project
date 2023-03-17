@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.random.Random
@@ -18,6 +20,8 @@ class HomePageActivity : AppCompatActivity() {
     private lateinit var logBtn: Button
     private lateinit var weekBtn: Button
     private lateinit var historyBtn: Button
+    private lateinit var settingsbtn: ImageButton
+    private lateinit var notifbtn: ImageButton
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,5 +62,10 @@ class HomePageActivity : AppCompatActivity() {
             startActivity(i)
         })
 
+        settingsbtn = findViewById(R.id.settingsBtn)
+        settingsbtn.setOnClickListener(View.OnClickListener {
+            val i = Intent(applicationContext, SettingsActivity::class.java)
+            startActivity(i)
+        })
     }
 }
