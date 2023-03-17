@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:textColor="#C8FF9800"
             android:text="Welcome to Bright Side!"
             android:textSize="34sp" />
 
@@ -52,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
-            android:hint="Enter Your Name Here      "
+            android:hint="  Enter Your Name Here  "
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -63,6 +64,7 @@
         android:layout_marginTop="50dp"
         android:text="Confirm"
         android:textColor="#FFFFFF"
+        app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Ll2" />
