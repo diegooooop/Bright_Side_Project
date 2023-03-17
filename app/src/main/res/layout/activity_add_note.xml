@@ -42,8 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:backgroundTint="#C8FF9800"
-            android:text="Submit" />
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="@android:dimen/app_icon_size"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

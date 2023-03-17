@@ -17,16 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_week_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="Your week so far"
-        android:textColor="#C8FF9800"
-        android:textSize="34sp" />
+        <TextView
+            android:id="@+id/tv_week_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Your week so far..."
+            android:textColor="#C8FF9800"
+            android:textSize="34sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_days"
