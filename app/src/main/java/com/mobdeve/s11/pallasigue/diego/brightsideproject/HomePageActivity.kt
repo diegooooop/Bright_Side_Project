@@ -20,7 +20,7 @@ class HomePageActivity : AppCompatActivity() {
     private lateinit var logBtn: Button
     private lateinit var weekBtn: Button
     private lateinit var historyBtn: Button
-    private lateinit var settingsbtn: ImageButton
+    private lateinit var settings: ImageButton
     private lateinit var notifbtn: ImageButton
 
     @SuppressLint("SetTextI18n")
@@ -62,8 +62,8 @@ class HomePageActivity : AppCompatActivity() {
             startActivity(i)
         })
 
-        settingsbtn = findViewById(R.id.settingsBtn)
-        settingsbtn.setOnClickListener(View.OnClickListener {
+        settings = findViewById(R.id.settingsBtn)
+        settings.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, SettingsActivity::class.java)
             startActivity(i)
         })
