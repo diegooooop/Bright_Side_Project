@@ -28,7 +28,7 @@ class HomePageActivity : AppCompatActivity() {
         val affirmation = intArrayOf(R.drawable.affirmation1,R.drawable.affirmation2,R.drawable.affirmation3)
 
         //generate random number
-        val num = Random.nextInt(0,5)
+        val num = Random.nextInt(0,2)
 
         //set the greetings to the username given
         homeName = findViewById(R.id.tv_home_name)
@@ -37,8 +37,8 @@ class HomePageActivity : AppCompatActivity() {
 
         //load affirmation pic
         affirmationPic = findViewById(R.id.affirmationIv)
-   //     affirmationPic.setImageResource(affirmation[num])
-        affirmationPic.setImageResource(R.drawable.test)
+        affirmationPic.setImageResource(affirmation[num])
+        //affirmationPic.setImageResource(R.drawable.test)
 
         logBtn = findViewById(R.id.moodBtn)
         logBtn.setOnClickListener(View.OnClickListener {

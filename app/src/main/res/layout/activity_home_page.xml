@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     tools:context=".HomePageActivity">
 
     <LinearLayout
@@ -12,6 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,104 +25,102 @@
             android:id="@+id/ll_settingsBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginBottom="10dp">
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:gravity="right">
 
 
-            <TextView
-                android:id="@+id/greetingTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/rubik_light"
-                android:text="Good Morning"
-                android:textSize="34sp" />
-
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/settingsBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="10"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#FFFF"
-                    android:clickable="true"
-                    android:contentDescription="Settings Button"
-                    android:focusable="true"
-                    android:src="@drawable/ic_settings" />
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="10"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#FFFFFF"
-                    app:srcCompat="@drawable/ic_notification" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:backgroundTint="@color/yellow"
+                app:srcCompat="@drawable/ic_notification" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/greetingTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="Good Morning,"
+            android:textColor="@color/yellow"
+            android:textSize="34sp" />
 
         <TextView
             android:id="@+id/tv_home_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold"
             android:text="Diego"
+            android:textColor="@color/yellow"
             android:textSize="48sp"
-            android:textStyle="italic|bold" />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/affirmationIv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:adjustViewBounds="true"
+            android:outlineProvider="background"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/affirmation1" />
 
         <Button
             android:id="@+id/moodBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="98dp"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#edbb6a"
+            android:backgroundTint="@color/yellow"
             android:padding="15dp"
             android:text="Log your mood"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:cornerRadius="@android:dimen/app_icon_size" />
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/weekBtn"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C3B1E1"
-            android:textColor="#000000"
-            android:padding="15dp"
-            android:textStyle="bold"
-            android:text="Your week so far"
-            android:textAlignment="center"
-            app:cornerRadius="@android:dimen/app_icon_size"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/logsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="#9fadd8"
-            android:textColor="#000000"
-            android:padding="15dp"
-            android:textStyle="bold"
-            android:text="See all my logs"
-            android:textAlignment="center"
-            app:cornerRadius="@android:dimen/app_icon_size"/>
+            <Button
+                android:id="@+id/weekBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:padding="15dp"
+                android:text="Weekly Report"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/logsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple"
+                android:padding="15dp"
+                android:text="See all logs"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

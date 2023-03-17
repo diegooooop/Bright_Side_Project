@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <color name="happy_yellow">#F8EACD</color>-->
-<!--    <color name="happy_darkyellow">#FFB751</color>-->
-
-<!--    <color name="sad_blue">#DAEDFC</color>-->
-<!--    <color name="sad_darkblue">#7BBCFC</color>-->
+    <color name="yellow">#FFB751</color>
     <color name="green">#2BB336</color>
-<!--    <color name="inlove_yellow">#DAEDFC</color>-->
-<!--    <color name="inlove_darkyellow">#FEB651</color>-->
+    <color name="blue">#A7D7C5</color>
+    <color name="purple">#C3B1E1</color>
 
-<!--    <color name="nervous_purple">#DAEDFC</color>-->
-<!--    <color name="nervous_darkpurple">#7078A6</color>-->
-
-<!--    <color name="angry_red">#DAEDFC</color>-->
-<!--    <color name="angry_darkred">#7078A6</color>-->
 </resources>
