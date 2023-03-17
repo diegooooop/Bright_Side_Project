@@ -13,7 +13,7 @@ class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val adjective: TextView = itemView.findViewById(R.id.tv_adjectives)
     private val notes: TextView = itemView.findViewById(R.id.tv_notes)
     private val moodText: TextView = itemView.findViewById(R.id.tv_moodText)
-    private val bgcolor: LinearLayout = itemView.findViewById(R.id.ll_daysummary)
+    private val bgcolor: LinearLayout = itemView.findViewById(R.id.ll_content)
 
     fun bindData(data: EntryModel)
     {
