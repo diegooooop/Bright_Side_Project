@@ -21,37 +21,32 @@ class WeeklyDataGenerator {
             data.add(
                 WeeklyModel(
                     "March 8, 2023 - Wednesday",
-                    "Confused",
-                    R.drawable.confused,
-                    adjectives = arrayOf<String>("Puzzled", "Disoriented"),
+                    MoodModel("Confused", R.drawable. confused,adjectives = arrayOf<String>("Puzzled", "Disoriented"),
+                        color = Color.parseColor("#C7E1F8")),
                     "I am overwhelmed with the things I need to do"))
             data.add(
                 WeeklyModel(
                     "March 9, 2023 - Thursday",
-                    "Happy",
-                    R.drawable.happy,
-                    adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                        color = Color.parseColor("#F8EACD")),
                     "There will be a makeup test this Friday!"))
             data.add(
                 WeeklyModel(
                     "March 10, 2023 - Friday",
-                    "In Love",
-                    R.drawable.inlove,
-                    adjectives = arrayOf<String>("Enamored", "Enchanted", "Amorous"),
+                    MoodModel("In Love",R.drawable.inlove, adjectives = arrayOf<String>("Enamored", "Enchanted", "Amorous"),
+                        color = Color.parseColor("#FFF9C7")),
                     "I got a perfect score! WHOO!"))
             data.add(
                 WeeklyModel(
                     "March 11, 2023 - Saturday",
-                    "Bored",
-                    R.drawable.bored,
-                    adjectives = arrayOf<String>("Monotonous",  "Uninspired"),
+                    MoodModel("Bored",R.drawable.bored,  adjectives = arrayOf<String>("Monotonous",  "Uninspired"),
+                        color = Color.parseColor("#F7CDD0")),
                     "What to do? :/"))
             data.add(
                 WeeklyModel(
                     "March 12, 2023 - Sunday",
-                    "Angry",
-                    R.drawable.angry,
-                    adjectives = arrayOf<String>("Seething", "Enraged", "Fuming"),
+                    MoodModel("Angry", R.drawable.angry, adjectives = arrayOf<String>("Seething", "Enraged", "Fuming"),
+                        color = Color.parseColor("#FFE5CF")),
                     "It's Monday again tomorrow!"))
             return data
         }
