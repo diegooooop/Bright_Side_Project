@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,55 +24,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:fontFamily="@font/rubik_light"
             android:gravity="center"
-            android:text="Do you want to set a daily reminder?"
+            android:text="Notification Settings"
             android:textColor="#C8FF9800"
             android:textSize="34sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/set_timeTv"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rubik_light"
-            android:gravity="center"
-            android:text="Set Daily Reminder Time"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp">
 
-        <EditText
-            android:id="@+id/timeEt"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:inputType="time" />
-
-        <CheckBox
-            android:id="@+id/no_remindCb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rubik_light"
-            android:layout_gravity="center"
-            android:text="No, don't remind me"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <Button
-                android:id="@+id/confirmBtn"
+            <Switch
+                android:id="@+id/switch1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="createNotification"
-                android:text="confirm"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="@android:dimen/app_icon_size" />
-        </RelativeLayout>
+                android:layout_weight="1"
+                android:enabled="true"
+                android:layoutDirection="rtl"
+                android:switchPadding="10dp"
+                android:text="Set Daily Reminder Time"
+                android:thumbTint="#4CAF50"
+                android:trackTint="#8DD590" />
+
+            <EditText
+                android:id="@+id/timeEt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:inputType="time"
+                android:text="10:00 PM" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="createNotification"
+            android:text="confirm"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="@android:dimen/app_icon_size" />
 
     </LinearLayout>
 
