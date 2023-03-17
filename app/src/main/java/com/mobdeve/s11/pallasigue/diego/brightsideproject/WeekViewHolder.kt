@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val mood: ImageView = itemView.findViewById(R.id.iv_mood)

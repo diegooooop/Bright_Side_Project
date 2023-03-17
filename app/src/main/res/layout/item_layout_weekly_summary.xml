@@ -23,6 +23,7 @@
             android:id="@+id/tv_day"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="TUESDAY"
             android:textSize="20sp"
@@ -76,7 +77,6 @@
                         android:layout_weight="1"
                         android:text="TextView" />
                 </LinearLayout>
-
                 <TextView
                     android:id="@+id/tv_adjectives"
                     android:layout_width="match_parent"

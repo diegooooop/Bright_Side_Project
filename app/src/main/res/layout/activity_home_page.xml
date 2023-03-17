@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="10dp">
+
 
             <TextView
                 android:id="@+id/greetingTv"
@@ -120,7 +120,6 @@
             android:text="See all my logs"
             android:textAlignment="center"
             app:cornerRadius="@android:dimen/app_icon_size"/>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

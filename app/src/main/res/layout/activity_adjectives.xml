@@ -25,6 +25,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:shadowColor="#C8FF9800"
             android:text="Add more details..."
             android:textColor="#C8FF9800"
             android:textSize="34sp" />
