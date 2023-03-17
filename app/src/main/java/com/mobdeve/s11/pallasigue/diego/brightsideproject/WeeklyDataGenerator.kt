@@ -1,5 +1,7 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
+import android.graphics.Color
+
 class WeeklyDataGenerator {
     companion object {
         fun loadData(): ArrayList<WeeklyModel>{
@@ -7,16 +9,14 @@ class WeeklyDataGenerator {
             data.add(
                 WeeklyModel(
                     "March 6, 2023 - Monday",
-                    "Anxious",
-                    R.drawable.nervous,
-                    adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
+                    MoodModel("Anxious", R.drawable.nervous, adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
+                        color = Color.parseColor("#F3F7FA")),
                     "I have not prepared for my exam this Monday"))
             data.add(
                 WeeklyModel(
                     "March 7, 2023 - Tuesday",
-                    "Sad",
-                    R.drawable.anxious,
-                    adjectives = arrayOf<String>("Blue", "Depressed", "Somber", "Miserable"),
+                    MoodModel("Sad", R.drawable.anxious, adjectives = arrayOf<String>("Blue", "Depressed", "Somber", "Miserable"),
+                        color = Color.parseColor("#DAEDFC")),
                     "I failed my exam"))
             data.add(
                 WeeklyModel(
