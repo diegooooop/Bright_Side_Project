@@ -29,8 +29,8 @@ class Adjectives : AppCompatActivity()
         val i = intent.getStringArrayExtra("Adjectives")
         val color = intent.getIntExtra("Color", 0)
 
-        nameTV.text = name
-        nameTV.setTextColor(color)
+        //nameTV.text = name
+        //nameTV.setTextColor(color)
 
 
         this.recyclerView = findViewById(R.id.rv_adjective)

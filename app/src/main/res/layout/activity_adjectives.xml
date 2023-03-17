@@ -26,7 +26,7 @@
             android:layout_marginBottom="20dp"
             android:gravity="center"
             android:shadowColor="#C8FF9800"
-            android:text="Add more details..."
+            android:text="Describe Your Day!"
             android:textColor="#C8FF9800"
             android:textSize="34sp" />
 
