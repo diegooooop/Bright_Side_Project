@@ -9,13 +9,11 @@
 
     <LinearLayout
         android:id="@+id/ll_notes"
-        android:layout_width="369dp"
-        android:layout_height="188dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="Tell me more!"
+            android:text="What did you do today?"
             android:textColor="#C8FF9800"
             android:textSize="34sp" />
 
@@ -33,8 +31,11 @@
             android:id="@+id/et_note_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
             android:ems="15"
-            android:gravity="start|top"
+            android:gravity="center"
+            android:hint="Enter your notes here"
             android:inputType="textMultiLine" />
 
         <Button
@@ -44,7 +45,7 @@
             android:layout_marginTop="15dp"
             android:text="Submit"
             android:textColor="#FFFFFF"
-            app:cornerRadius="@android:dimen/app_icon_size"/>
+            app:cornerRadius="@android:dimen/app_icon_size" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
