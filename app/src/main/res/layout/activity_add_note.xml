@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="What did you do today?"
+            android:text="Notes for Today"
             android:textColor="#C8FF9800"
             android:textSize="34sp" />
 
@@ -44,8 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Submit"
-            android:textColor="#FFFFFF"
-            app:cornerRadius="@android:dimen/app_icon_size" />
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
