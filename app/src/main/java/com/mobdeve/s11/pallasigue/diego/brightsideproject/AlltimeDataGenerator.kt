@@ -9,9 +9,9 @@ class AlltimeDataGenerator {
             data.add(
                 EntryModel(
                     "March 5, 2023 - Sunday",
-                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Fidgety", "Panicky", "Worried"),
-                        color = Color.parseColor("#F3F7FA")),
-                    "I have not prepared for my exam this Monday"))
+                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                        color = Color.parseColor("#F8EACD")),
+                    "There will be a makeup test this Friday!"))
             data.add(
                 EntryModel(
                     "March 6, 2023 - Monday",
@@ -55,4 +55,3 @@ class AlltimeDataGenerator {
                         color = Color.parseColor("#FFE5CF")),
                     "It's Monday again tomorrow!"))
             return data
-        }}}

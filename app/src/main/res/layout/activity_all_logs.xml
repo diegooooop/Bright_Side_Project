@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
+            android:textColor="#C8FF9800"
             android:text="All-time data"
             android:textSize="34sp" />
 
