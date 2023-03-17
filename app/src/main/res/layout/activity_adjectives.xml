@@ -46,6 +46,7 @@
             android:layout_margin="10dp"
             android:backgroundTint="#2BB336"
             android:text="Confirm"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            app:cornerRadius="@android:dimen/app_icon_size"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

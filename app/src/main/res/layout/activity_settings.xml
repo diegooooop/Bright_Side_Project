@@ -67,10 +67,10 @@
                 android:id="@+id/confirmBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:onClick="createNotification"
-                android:backgroundTint="#C8FF9800"
-                android:text="confirm" />
+                android:text="confirm"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="@android:dimen/app_icon_size" />
         </RelativeLayout>
 
     </LinearLayout>

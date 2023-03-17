@@ -29,7 +29,7 @@
             <ImageButton
                 android:id="@+id/settingsBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:adjustViewBounds="false"
                 android:backgroundTint="#FFFF"
                 android:clickable="true"
@@ -50,6 +50,7 @@
             android:id="@+id/greetingTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_light"
             android:text="Good Morning,"
             android:textSize="34sp" />
 
@@ -57,16 +58,16 @@
             android:id="@+id/tv_home_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deigo"
+            android:text="Diego"
             android:textSize="48sp"
-            android:textStyle="bold" />
+            android:textStyle="italic|bold" />
 
         <ImageView
             android:id="@+id/affirmationIv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/affirmation1" />
@@ -76,29 +77,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FDD394"
+            android:backgroundTint="#edbb6a"
+            android:padding="15dp"
             android:text="Log your mood"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:cornerRadius="@android:dimen/app_icon_size" />
 
         <Button
             android:id="@+id/weekBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FDD394"
+            android:backgroundTint="#C3B1E1"
+            android:textColor="#000000"
+            android:padding="15dp"
+            android:textStyle="bold"
             android:text="Your week so far"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            app:cornerRadius="@android:dimen/app_icon_size"/>
 
         <Button
             android:id="@+id/logsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="#C8FDD394"
+            android:backgroundTint="#9fadd8"
+            android:textColor="#000000"
+            android:padding="15dp"
+            android:textStyle="bold"
             android:text="See all my logs"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            app:cornerRadius="@android:dimen/app_icon_size"/>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
