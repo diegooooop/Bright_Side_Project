@@ -19,6 +19,9 @@ class WeeklySummaryActivity : AppCompatActivity() {
 
         this.recyclerView = findViewById(R.id.rv_days)
         this.recyclerView.adapter = AdapterWeek(this.week)
-        this.recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        this.recyclerView.layoutManager = linearLayoutManager
     }
 }
