@@ -29,12 +29,6 @@
             android:textSize="22sp"
             android:textStyle="normal" />
 
-        <TextView
-            android:id="@+id/tv_day"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
         <LinearLayout
             android:id="@+id/ll_content"
             android:layout_width="match_parent"

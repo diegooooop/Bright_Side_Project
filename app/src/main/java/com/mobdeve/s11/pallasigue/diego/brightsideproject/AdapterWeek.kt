@@ -1,7 +1,9 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterWeek(private val data: ArrayList<EntryModel>): RecyclerView.Adapter<WeekViewHolder>() {
@@ -13,6 +15,7 @@ class AdapterWeek(private val data: ArrayList<EntryModel>): RecyclerView.Adapter
         return WeekViewHolder(view)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: WeekViewHolder, position: Int) {
         holder.bindData(data[position])
     }

@@ -3,7 +3,7 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 import java.time.LocalDate
 import java.util.*
 
-class EntryModel (val date: LocalDate, val day: String, val model: MoodModel, val notes: String) {
+class EntryModel (val date: LocalDate, val model: MoodModel, val notes: String) {
 
     //Date: March 17, 2023
     //Day: Tuesday

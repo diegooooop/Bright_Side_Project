@@ -37,7 +37,7 @@ class AllLogsActivity : AppCompatActivity() {
 
 
         this.recyclerView = findViewById(R.id.rv_logs)
-        this.recyclerView.adapter = AdapterWeek(this.allTime)
+        this.recyclerView.adapter = AdapterAllTime(this.allTime)
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
 
