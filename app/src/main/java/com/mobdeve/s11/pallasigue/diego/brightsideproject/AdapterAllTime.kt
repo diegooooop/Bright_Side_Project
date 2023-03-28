@@ -1,7 +1,9 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterAllTime(private val data: ArrayList<EntryModel>): RecyclerView.Adapter<AllTimeViewHolder>()  {
@@ -12,6 +14,7 @@ class AdapterAllTime(private val data: ArrayList<EntryModel>): RecyclerView.Adap
         return AllTimeViewHolder(view)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: AllTimeViewHolder, position: Int) {
         holder.bindData(data[position])
     }
