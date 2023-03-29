@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -44,7 +45,6 @@
                     android:adjustViewBounds="true"
                     android:paddingStart="15dp"
                     android:paddingLeft="15dp"
-                    android:paddingTop="10dp"
                     android:paddingEnd="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="10dp"
