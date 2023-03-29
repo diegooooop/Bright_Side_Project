@@ -17,11 +17,10 @@ class HomePageActivity : AppCompatActivity() {
 
     private lateinit var homeName: TextView
     private lateinit var affirmationPic: ImageView
-    private lateinit var logBtn: Button
+    private lateinit var moodBtn: Button
     private lateinit var weekBtn: Button
-    private lateinit var historyBtn: Button
+    private lateinit var logsBtn: Button
     private lateinit var settings: ImageButton
-    private lateinit var notifbtn: ImageButton
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +43,8 @@ class HomePageActivity : AppCompatActivity() {
         affirmationPic.setImageResource(affirmation[num])
         //affirmationPic.setImageResource(R.drawable.test)
 
-        logBtn = findViewById(R.id.moodBtn)
-        logBtn.setOnClickListener(View.OnClickListener {
+        moodBtn = findViewById(R.id.moodBtn)
+        moodBtn.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, MainActivity::class.java)
             startActivity(i)
         })
@@ -56,8 +55,8 @@ class HomePageActivity : AppCompatActivity() {
             startActivity(i)
         })
 
-        logBtn = findViewById(R.id.logsBtn)
-        logBtn.setOnClickListener(View.OnClickListener {
+        logsBtn = findViewById(R.id.logsBtn)
+        logsBtn.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, AllLogsActivity::class.java)
             startActivity(i)
         })
