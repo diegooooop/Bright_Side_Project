@@ -43,7 +43,7 @@
                 <ImageView
                     android:id="@+id/iv_logmood"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
+                    android:layout_height="220dp"
                     android:adjustViewBounds="true"
                     android:paddingStart="15dp"
                     android:paddingLeft="15dp"
@@ -77,8 +77,8 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -87,10 +87,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:fontFamily="@font/rubik_bold"
-                    android:textColor="@color/green"
+                    android:padding="3dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:background="@color/blue"
+                    android:textColor="@android:color/white"
                     android:text="You described this day as:"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_adjectivelist"
@@ -99,7 +101,7 @@
                     android:gravity="center"
                     android:fontFamily="@font/rubik"
                     android:text="Insert Adjectives"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -115,10 +117,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:fontFamily="@font/rubik_bold"
-                    android:textColor="@color/green"
+                    android:padding="3dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:background="@color/purple"
+                    android:textColor="@android:color/white"
                     android:text="Notes for the day:"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_noteslist"
@@ -127,7 +131,7 @@
                     android:gravity="center"
                     android:fontFamily="@font/rubik"
                     android:text="Insert Notes"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 

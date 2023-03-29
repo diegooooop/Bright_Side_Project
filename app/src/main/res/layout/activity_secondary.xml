@@ -67,7 +67,7 @@
         android:fontFamily="@font/rubik"
         android:text="Confirm"
         android:textColor="@android:color/white"
-        app:cornerRadius="@android:dimen/app_icon_size"
+        app:cornerRadius="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Ll2" />

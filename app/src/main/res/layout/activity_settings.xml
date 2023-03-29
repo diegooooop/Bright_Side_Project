@@ -73,7 +73,7 @@
             android:fontFamily="@font/rubik"
             android:text="confirm"
             android:textColor="@android:color/white"
-            app:cornerRadius="@android:dimen/app_icon_size" />
+            app:cornerRadius="48dp" />
 
     </LinearLayout>
 

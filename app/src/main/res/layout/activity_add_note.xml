@@ -47,7 +47,8 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/rubik"
             android:text="Submit"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:cornerRadius="48dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
