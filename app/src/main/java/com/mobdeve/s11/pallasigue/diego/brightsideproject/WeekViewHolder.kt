@@ -11,12 +11,14 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
 class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    private val mood: ImageView = itemView.findViewById(R.id.iv_mood)
-    private val date: TextView = itemView.findViewById(R.id.tv_date)
-    private val adjective: TextView = itemView.findViewById(R.id.tv_adjectives)
-    private val notes: TextView = itemView.findViewById(R.id.tv_notes)
-    private val moodText: TextView = itemView.findViewById(R.id.tv_moodText)
-    private val bgcolor: LinearLayout = itemView.findViewById(R.id.ll_content)
+    private val date: TextView = itemView.findViewById(R.id.tv_logdate)
+    private val bgcolor: LinearLayout = itemView.findViewById(R.id.ll_contententry)
+    private val mood: ImageView = itemView.findViewById(R.id.iv_logmood)
+    private val moodText: TextView = itemView.findViewById(R.id.tv_moodname)
+    private val adjective: TextView = itemView.findViewById(R.id.tv_adjectivelist)
+    private val notes: TextView = itemView.findViewById(R.id.tv_noteslist)
+
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun bindData(data: EntryModel)
