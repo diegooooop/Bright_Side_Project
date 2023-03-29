@@ -3,11 +3,29 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 import java.time.LocalDate
 import java.util.*
 
-class EntryModel (val date: LocalDate, val model: MoodModel, val notes: String) {
+class EntryModel {
+    var date: LocalDate
+        private set
 
-    //Date: March 17, 2023
-    //Day: Tuesday
-    //Mood Model: Happy, Adjective 1 , Adjective 2, Adjective 3
-    //Notes: I felt happy today
+    var model: MoodModel
+        private set
 
+    var notes: String
+        private set
+
+    var id: Long = 0
+        private set
+
+    constructor(date: LocalDate, model: MoodModel, notes: String){
+        this.date = date
+        this.model = model
+        this.notes = notes
+    }
+
+    constructor(date: LocalDate, model: MoodModel, notes: String, id: Long){
+        this.date = date
+        this.model = model
+        this.notes = notes
+        this.id = id
+    }
 }
