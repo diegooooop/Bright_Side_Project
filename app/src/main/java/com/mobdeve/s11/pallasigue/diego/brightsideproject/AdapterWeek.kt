@@ -10,7 +10,7 @@ class AdapterWeek(private val data: ArrayList<EntryModel>): RecyclerView.Adapter
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeekViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_layout_weekly_summary, parent, false)
+        val view = inflater.inflate(R.layout.item_layout_alltime_entry, parent, false)
 
         return WeekViewHolder(view)
     }

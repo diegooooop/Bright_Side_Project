@@ -9,20 +9,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tv_logdate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
             android:gravity="center"
             android:text="Wednesday, March 29, 2023"
-            android:textSize="34sp" />
+            android:textSize="27sp" />
 
         <LinearLayout
             android:id="@+id/ll_contententry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageView
@@ -31,7 +37,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.3"
                 android:adjustViewBounds="true"
-                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/angry" />
 
@@ -56,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="ANGRY"
-                    android:textSize="24sp"
+                    android:textSize="48sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -65,12 +76,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/adjectives"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="You described this day as:"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -81,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Insert Adjectives"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -90,12 +103,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/notes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Notes for the day:"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -105,8 +120,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView"
-                    android:textSize="24sp" />
+                    android:text="Insert Notes"
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 
