@@ -25,9 +25,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_medium"
             android:shadowColor="@color/yellow"
-            android:text="Describe Your Day!"
+            android:text="Describe Your Day"
             android:textColor="@color/yellow"
             android:textSize="34sp" />
 
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_medium"
             android:text="Confirm"
             android:textColor="@android:color/white"
             app:cornerRadius="48dp"/>

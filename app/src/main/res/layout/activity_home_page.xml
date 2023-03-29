@@ -58,8 +58,7 @@
             android:fontFamily="@font/rubik_bold"
             android:text="Diego"
             android:textColor="@color/yellow"
-            android:textSize="48sp"
-            android:textStyle="bold" />
+            android:textSize="48sp" />
 
         <ImageView
             android:id="@+id/affirmationIv"
@@ -89,7 +88,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button

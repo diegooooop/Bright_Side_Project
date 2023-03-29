@@ -86,12 +86,12 @@
                     android:id="@+id/adjectives"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:fontFamily="@font/rubik_medium"
                     android:gravity="center"
                     android:padding="3dp"
-                    android:fontFamily="@font/rubik_medium"
-                    android:background="@color/blue"
-                    android:textColor="@android:color/white"
                     android:text="You described this day as:"
+                    android:textColor="@android:color/white"
                     android:textSize="18sp" />
 
                 <TextView

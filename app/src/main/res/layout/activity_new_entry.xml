@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_medium"
             android:gravity="center"
             android:text="How are you feeling today?"
             android:textColor="@color/yellow"
