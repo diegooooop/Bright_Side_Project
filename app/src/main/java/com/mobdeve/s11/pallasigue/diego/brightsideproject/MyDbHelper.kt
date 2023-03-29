@@ -16,7 +16,6 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
 
     companion object {
         private var instance: MyDbHelper? = null
-
         @Synchronized
         fun getInstance(context: Context): MyDbHelper? {
             if (instance == null) {
@@ -36,7 +35,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun getAllEntriesDefault() {
+    fun getAllEntriesDefault(): ArrayList<EntryModel>{
         val database: SQLiteDatabase = this.readableDatabase
 
         val c: Cursor = database.query(
@@ -64,8 +63,14 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
             formatted,
             read(blob),
             c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_NOTES)),
+            c.getLong(c.getColumnIndexOrThrow(DbReference._ID))
         ))
         }
+
+        c.close()
+        database.close()
+
+        return entry
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -85,6 +90,8 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         val model = makebyte(entry.model)
         values.put(DbReference.COLUMN_NAME_MODEL, model)
 
+        database.insert(DbReference.TABLE_NAME, null, values)
+        database.close()
     }
 
     fun makebyte(modeldata: MoodModel): ByteArray? {
