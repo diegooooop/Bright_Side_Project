@@ -19,10 +19,11 @@
             android:id="@+id/tv_logdate"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/rubik"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Wednesday, March 29, 2023"
-            android:textSize="27sp" />
+            android:textSize="26sp" />
 
         <LinearLayout
             android:id="@+id/ll_contententry"
@@ -42,7 +43,7 @@
                 <ImageView
                     android:id="@+id/iv_logmood"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="220dp"
                     android:adjustViewBounds="true"
                     android:paddingStart="15dp"
                     android:paddingLeft="15dp"
@@ -56,15 +57,17 @@
                     android:id="@+id/moodtext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
                     android:gravity="bottom|center"
                     android:text="You felt"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/tv_moodname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:fontFamily="@font/rubik_bold"
                     android:text="ANGRY"
                     android:textSize="46sp"
                     android:textStyle="bold" />
@@ -74,8 +77,8 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -83,16 +86,20 @@
                     android:id="@+id/adjectives"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:fontFamily="@font/rubik_medium"
                     android:gravity="center"
+                    android:padding="3dp"
                     android:text="You described this day as:"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_adjectivelist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:fontFamily="@font/rubik"
                     android:text="Insert Adjectives"
                     android:textSize="16sp"
                     android:textStyle="normal" />
@@ -110,15 +117,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="3dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:background="@color/purple"
+                    android:textColor="@android:color/white"
                     android:text="Notes for the day:"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_noteslist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:fontFamily="@font/rubik"
                     android:text="Insert Notes"
                     android:textSize="16sp" />
             </LinearLayout>

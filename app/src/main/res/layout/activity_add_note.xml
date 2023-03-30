@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_medium"
             android:text="Notes for Today"
             android:textColor="@color/yellow"
             android:textSize="34sp" />
@@ -37,17 +37,23 @@
             android:ems="15"
             android:gravity="center"
             android:fontFamily="@font/rubik_light"
-            android:hint="Enter your notes here"
-            android:inputType="textMultiLine" />
+            android:hint="How was your day?"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="4"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"/>
 
         <Button
             android:id="@+id/btn_note_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/rubik_medium"
             android:text="Submit"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:cornerRadius="48dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
