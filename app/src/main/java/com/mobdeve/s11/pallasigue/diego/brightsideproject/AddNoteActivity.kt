@@ -18,6 +18,7 @@ class AddNoteActivity : AppCompatActivity() {
             val i = Intent(applicationContext, HomePageActivity::class.java)
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i)
+            finish()
         })
     }
 }
