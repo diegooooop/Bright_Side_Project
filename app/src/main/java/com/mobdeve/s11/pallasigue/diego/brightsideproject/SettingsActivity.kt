@@ -42,6 +42,7 @@ class SettingsActivity : AppCompatActivity() {
         confbtn.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, HomePageActivity::class.java)
             startActivity(i)
+            finish()
         })
     }
 }

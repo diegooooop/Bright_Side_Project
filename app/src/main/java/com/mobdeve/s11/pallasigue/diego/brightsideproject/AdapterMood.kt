@@ -1,10 +1,9 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
+import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<MoodViewHolder>() {
@@ -20,6 +19,7 @@ class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<
             i.putExtra("Adjectives", data[myViewHolder.adapterPosition].adjectives)
             i.putExtra("Color", data[myViewHolder.adapterPosition].color)
             myViewHolder.itemView.context.startActivity(i)
+            (myViewHolder.itemView.context as Activity).finish()
         }
 
         return myViewHolder
