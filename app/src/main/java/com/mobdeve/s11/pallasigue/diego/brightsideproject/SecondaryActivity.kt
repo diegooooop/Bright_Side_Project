@@ -25,6 +25,7 @@ class SecondaryActivity : AppCompatActivity() {
         if (!sharedPreferences.getBoolean(prevStarted, false)) {
             val editor = sharedPreferences.edit()
             editor.putBoolean(prevStarted, true)
+            editor.apply()
         }
         else {
             moveToSecondary()
