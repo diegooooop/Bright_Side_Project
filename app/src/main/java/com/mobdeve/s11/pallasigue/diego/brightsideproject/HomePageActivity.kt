@@ -1,7 +1,9 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
@@ -21,6 +23,7 @@ class HomePageActivity : AppCompatActivity() {
     private lateinit var weekBtn: Button
     private lateinit var logsBtn: Button
     private lateinit var settings: ImageButton
+    private lateinit var nameValue: String
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +38,8 @@ class HomePageActivity : AppCompatActivity() {
 
         //set the greetings to the username given
         homeName = findViewById(R.id.tv_home_name)
-        val username = intent.getStringExtra("name")
-        homeName.text = username
+//        val username = intent.getStringExtra("name")
+
 
         //load affirmation pic
         affirmationPic = findViewById(R.id.affirmationIv)
@@ -66,5 +69,19 @@ class HomePageActivity : AppCompatActivity() {
             val i = Intent(applicationContext, SettingsActivity::class.java)
             startActivity(i)
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val sp : SharedPreferences = getSharedPreferences("HomePageActivity", Context.MODE_PRIVATE)
+        nameValue = sp.getString("namekey", " ").toString()
+        homeName.text = nameValue
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val sp : SharedPreferences = getSharedPreferences("HomePageActivity", Context.MODE_PRIVATE)
+        nameValue = sp.getString("namekey", " ").toString()
+        homeName.text = nameValue
     }
 }

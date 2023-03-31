@@ -1,6 +1,5 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -9,6 +8,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
 
 class SecondaryActivity : AppCompatActivity() {
 
@@ -31,6 +32,10 @@ class SecondaryActivity : AppCompatActivity() {
         }
     }
 
+    companion object {
+        const val nameKey = "name_key"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_secondary)
@@ -40,8 +45,9 @@ class SecondaryActivity : AppCompatActivity() {
         btn.setOnClickListener(View.OnClickListener {
             if(!userName.text.toString().isNullOrBlank()) {
                 val i = Intent(this.applicationContext, HomePageActivity::class.java)
-                i.putExtra("name", userName.text.toString())
+                i.putExtra(nameKey, userName.text.toString())
                 startActivity(i)
+                finish()
             }
             else{
                 Toast.makeText(applicationContext,"Please Enter Your Name", Toast.LENGTH_SHORT).show()
@@ -54,5 +60,14 @@ class SecondaryActivity : AppCompatActivity() {
         val intent = Intent(this, HomePageActivity::class.java)
         intent.putExtra("name", userName.text)
         startActivity(intent)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val sp : SharedPreferences = this.getSharedPreferences("HomePageActivity",Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = sp.edit()
+        editor.putString("namekey", userName.text.toString())
+        editor.clear()
+        editor.commit()
     }
 }
