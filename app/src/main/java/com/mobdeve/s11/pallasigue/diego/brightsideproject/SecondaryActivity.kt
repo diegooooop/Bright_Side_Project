@@ -16,7 +16,7 @@ class SecondaryActivity : AppCompatActivity() {
     private lateinit var btn: Button
     private lateinit var userName: EditText
     private val prevStarted = "yes"
-
+    private lateinit var name: String
     override fun onResume() {
         super.onResume()
 
@@ -33,7 +33,7 @@ class SecondaryActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val nameKey = "name_key"
+        var nameKey = "name_key"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +44,8 @@ class SecondaryActivity : AppCompatActivity() {
         userName = findViewById(R.id.nameEt)
         btn.setOnClickListener(View.OnClickListener {
             if(!userName.text.toString().isNullOrBlank()) {
+                name = userName.text.toString()
                 val i = Intent(this.applicationContext, HomePageActivity::class.java)
-                i.putExtra(nameKey, userName.text.toString())
                 startActivity(i)
                 finish()
             }
@@ -58,16 +58,16 @@ class SecondaryActivity : AppCompatActivity() {
     private fun moveToSecondary() {
         // use an intent to travel from one activity to another.
         val intent = Intent(this, HomePageActivity::class.java)
-        intent.putExtra("name", userName.text)
         startActivity(intent)
+        finish()
     }
 
     override fun onPause() {
         super.onPause()
-        val sp : SharedPreferences = this.getSharedPreferences("HomePageActivity",Context.MODE_PRIVATE)
+        name = userName.text.toString()
+        val sp : SharedPreferences = this.getSharedPreferences(getString(R.string.app_name),Context.MODE_PRIVATE)
         val editor : SharedPreferences.Editor = sp.edit()
-        editor.putString("namekey", userName.text.toString())
-        editor.clear()
-        editor.commit()
+        editor.putString(SecondaryActivity.nameKey, name)
+        editor.apply()
     }
 }

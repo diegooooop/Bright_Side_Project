@@ -5,12 +5,11 @@ import java.util.*
 
 class EntryModel {
     var date: LocalDate
-
+    private set
     var model: MoodModel
-
+    private set
     var notes: String
-
-
+    private set
     var id: Long = 0
 
 

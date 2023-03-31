@@ -38,6 +38,10 @@ class HomePageActivity : AppCompatActivity() {
 
         //set the greetings to the username given
         homeName = findViewById(R.id.tv_home_name)
+
+        val sp : SharedPreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+        nameValue = sp.getString(SecondaryActivity.nameKey, "none").toString()
+        homeName.text = nameValue
 //        val username = intent.getStringExtra("name")
 
 
@@ -71,17 +75,10 @@ class HomePageActivity : AppCompatActivity() {
         })
     }
 
-    override fun onResume() {
-        super.onResume()
-        val sp : SharedPreferences = getSharedPreferences("HomePageActivity", Context.MODE_PRIVATE)
-        nameValue = sp.getString("namekey", " ").toString()
-        homeName.text = nameValue
-    }
-
     override fun onStart() {
         super.onStart()
-        val sp : SharedPreferences = getSharedPreferences("HomePageActivity", Context.MODE_PRIVATE)
-        nameValue = sp.getString("namekey", " ").toString()
+        val sp : SharedPreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+        nameValue = sp.getString(SecondaryActivity.nameKey, "none").toString()
         homeName.text = nameValue
     }
 }
