@@ -25,7 +25,6 @@ class SecondaryActivity : AppCompatActivity() {
         if (!sharedPreferences.getBoolean(prevStarted, false)) {
             val editor = sharedPreferences.edit()
             editor.putBoolean(prevStarted, true)
-            editor.apply()
         }
         else {
             moveToSecondary()
@@ -47,7 +46,6 @@ class SecondaryActivity : AppCompatActivity() {
                 name = userName.text.toString()
                 val i = Intent(this.applicationContext, HomePageActivity::class.java)
                 startActivity(i)
-                finish()
             }
             else{
                 Toast.makeText(applicationContext,"Please Enter Your Name", Toast.LENGTH_SHORT).show()
