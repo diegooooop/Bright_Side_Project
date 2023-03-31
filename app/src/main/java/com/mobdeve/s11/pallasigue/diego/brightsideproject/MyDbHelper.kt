@@ -53,15 +53,27 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
 
 
         while(c.moveToNext()){
-            var blob = c.getBlob(c.getColumnIndexOrThrow((DbReference.COLUMN_NAME_MODEL)))
+//            var blob = c.getBlob(c.getColumnIndexOrThrow((DbReference.COLUMN_NAME_MODEL)))
 
             val current = c.getString(c.getColumnIndexOrThrow((DbReference.COLUMN_NAME_DATE)))
             val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)
             val formatted = LocalDate.parse(current, formatter)
 
+            val name = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_NAME))
+            val adj = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_ADJECTIVES))
+            val imageID = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_IMAGE))
+            val color = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_COLOR))
+
+            val adjectiveArray: Array<String>
+            adjectiveArray = adj.split("[ ,]").toTypedArray()
+
+            val moodObject: MoodModel
+            moodObject = MoodModel(name,imageID, adjectiveArray,color)
+
+
         entry.add(EntryModel(
             formatted,
-            read(blob),
+            moodObject,
             c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_NOTES)),
             c.getLong(c.getColumnIndexOrThrow(DbReference._ID))
         ))
@@ -87,8 +99,14 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         val formatted = current.format(formatter)
         values.put(DbReference.COLUMN_NAME_DATE, formatted)
 
-        val model = makebyte(entry.model)
-        values.put(DbReference.COLUMN_NAME_MODEL, model)
+        val adjstring = entry.model.adjectives.joinToString{","}
+        values.put(DbReference.COLUMN_NAME_MODEL_NAME, entry.model.name)
+        values.put(DbReference.COLUMN_NAME_MODEL_IMAGE, entry.model.imageId)
+        values.put(DbReference.COLUMN_NAME_MODEL_ADJECTIVES, adjstring)
+        values.put(DbReference.COLUMN_NAME_MODEL_COLOR, entry.model.color)
+
+//        val model = makebyte(entry.model)
+//        values.put(DbReference.COLUMN_NAME_MODEL, model)
 
         database.insert(DbReference.TABLE_NAME, null, values)
         database.close()
@@ -123,19 +141,22 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         const val COLUMN_NAME_DATE = "date"
         const val COLUMN_NAME_NOTES = "notes"
 
-        const val COLUMN_NAME_MODEL = "model"
+//        const val COLUMN_NAME_MODEL = "model"
 
-//        const val COLUMN_NAME_MODEL_NAME = "name"
-//        const val COLUMN_NAME_MODEL_IMAGE = "image"
-//        const val COLUMN_NAME_MODEL_ADJECTIVES = "adjectives"
-//        const val COLUMN_NAME_MODEL_COLOR = "color"
+        const val COLUMN_NAME_MODEL_NAME = "name"
+        const val COLUMN_NAME_MODEL_IMAGE = "image"
+        const val COLUMN_NAME_MODEL_ADJECTIVES = "adjectives"
+        const val COLUMN_NAME_MODEL_COLOR = "color"
 
         const val CREATE_TABLE_STATEMENT =
             "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
                     _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_NAME_DATE + " TEXT, " +
                     COLUMN_NAME_NOTES + " TEXT, " +
-                    COLUMN_NAME_MODEL + " TEXT)"
+                    COLUMN_NAME_MODEL_NAME + " TEXT" +
+                    COLUMN_NAME_MODEL_IMAGE + " TEXT" +
+                    COLUMN_NAME_MODEL_ADJECTIVES + " TEXT" +
+                    COLUMN_NAME_MODEL_COLOR + " TEXT )"
 
         const val DROP_TABLE_STATEMENT = "DROP TABLE IF EXISTS " + TABLE_NAME
     }

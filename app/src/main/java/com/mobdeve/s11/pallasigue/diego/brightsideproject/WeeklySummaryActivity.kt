@@ -25,7 +25,7 @@ class WeeklySummaryActivity : AppCompatActivity() {
         this.week = myDbHelper.getAllEntriesDefault()
 
         this.recyclerView = findViewById(R.id.rv_days)
-        this.recyclerView.adapter = AdapterWeek(week)
+        this.recyclerView.adapter = AdapterWeek(this.week)
 
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
