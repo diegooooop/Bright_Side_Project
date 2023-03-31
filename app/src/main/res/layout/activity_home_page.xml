@@ -29,7 +29,6 @@
             android:layout_marginBottom="10dp"
             android:gravity="right">
 
-
             <ImageButton
                 android:id="@+id/settingsBtn"
                 android:layout_width="wrap_content"
