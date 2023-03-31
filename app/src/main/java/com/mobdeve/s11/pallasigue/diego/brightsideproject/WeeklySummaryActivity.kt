@@ -12,15 +12,20 @@ import androidx.recyclerview.widget.SnapHelper
 class WeeklySummaryActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var myDbHelper: MyDbHelper
+    private lateinit var week: ArrayList<EntryModel>
+
     @RequiresApi(Build.VERSION_CODES.O)
-    private val week: ArrayList<EntryModel> = WeeklyDataGenerator.loadData()
-    @RequiresApi(Build.VERSION_CODES.O)
+   // private val week: ArrayList<EntryModel> = WeeklyDataGenerator.loadData()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weekly_summary)
 
+        myDbHelper = MyDbHelper.getInstance(this@WeeklySummaryActivity)!!
+        this.week = myDbHelper.getAllEntriesDefault()
+
         this.recyclerView = findViewById(R.id.rv_days)
-        this.recyclerView.adapter = AdapterWeek(this.week)
+        this.recyclerView.adapter = AdapterWeek(week)
 
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL

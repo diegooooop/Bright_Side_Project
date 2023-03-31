@@ -45,7 +45,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
             null,
             null,
             null,
-            DbReference.COLUMN_NAME_DATE + "ASC",
+            null,
             null
         )
 

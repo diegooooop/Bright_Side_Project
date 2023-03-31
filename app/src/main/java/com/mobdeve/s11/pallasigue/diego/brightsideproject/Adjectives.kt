@@ -18,6 +18,8 @@ class Adjectives : AppCompatActivity()
     private lateinit var nameTV: TextView
     private lateinit var recyclerView: RecyclerView
     private lateinit var confirmBtn: Button
+    lateinit var adj: ArrayList<String>
+
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,18 +28,22 @@ class Adjectives : AppCompatActivity()
         confirmBtn = findViewById(R.id.btn_adjective_confirm)
 
         val name = intent.getStringExtra("Name")
-        val i = intent.getStringArrayExtra("Adjectives")
+        val adj = intent.getStringArrayExtra("Adjectives")
         val color = intent.getIntExtra("Color", 0)
         var imageId = intent.getIntExtra("ImageId", 0)
 
 
         this.recyclerView = findViewById(R.id.rv_adjective)
-        this.recyclerView.adapter = i?.let { AdapterAdjectives(it, color) }
+        this.recyclerView.adapter = adj?.let { AdapterAdjectives(it, color) }
 
         this.recyclerView.layoutManager = GridLayoutManager(getActivity(applicationContext), 2)
 
         confirmBtn.setOnClickListener(View.OnClickListener {
             val i = Intent(applicationContext, AddNoteActivity::class.java)
+            i.putExtra("Name", name)
+            i.putExtra("ImageId", imageId)
+            i.putExtra("Adjectives", adj)
+            i.putExtra("Color", color)
             startActivity(i)
         })
     }

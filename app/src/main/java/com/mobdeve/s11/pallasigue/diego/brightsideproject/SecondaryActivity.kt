@@ -40,7 +40,7 @@ class SecondaryActivity : AppCompatActivity() {
         btn.setOnClickListener(View.OnClickListener {
             if(!userName.text.toString().isNullOrBlank()) {
                 val i = Intent(this.applicationContext, HomePageActivity::class.java)
-                i.putExtra("name", userName.text)
+                i.putExtra("name", userName.text.toString())
                 startActivity(i)
             }
             else{

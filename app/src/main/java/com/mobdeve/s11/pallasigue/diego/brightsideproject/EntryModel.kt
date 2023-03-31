@@ -5,16 +5,14 @@ import java.util.*
 
 class EntryModel {
     var date: LocalDate
-        private set
 
     var model: MoodModel
-        private set
 
     var notes: String
-        private set
+
 
     var id: Long = 0
-        private set
+
 
     constructor(date: LocalDate, model: MoodModel, notes: String){
         this.date = date

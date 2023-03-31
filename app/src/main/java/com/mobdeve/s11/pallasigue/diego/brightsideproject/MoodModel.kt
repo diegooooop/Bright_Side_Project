@@ -2,4 +2,4 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import android.graphics.Color
 
-class MoodModel (val name: String, val imageId: Int, val adjectives: Array<String>, val color: Int)
+class MoodModel (var name: String, var imageId: Int, var adjectives: Array<String>, var color: Int)
