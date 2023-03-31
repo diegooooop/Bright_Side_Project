@@ -61,7 +61,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
 
             val name = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_NAME))
             val adj = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_ADJECTIVES))
-            val imageID = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_IMAGE))
+            val imageID = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_IMAGEID))
             val color = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_COLOR))
 
             val adjectiveArray: Array<String>
@@ -99,9 +99,9 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         val formatted = current.format(formatter)
         values.put(DbReference.COLUMN_NAME_DATE, formatted)
 
-        val adjstring = entry.model.adjectives.joinToString{","}
+        val adjstring = entry.model.adjectives.joinToString()
         values.put(DbReference.COLUMN_NAME_MODEL_NAME, entry.model.name)
-        values.put(DbReference.COLUMN_NAME_MODEL_IMAGE, entry.model.imageId)
+        values.put(DbReference.COLUMN_NAME_MODEL_IMAGEID, entry.model.imageId)
         values.put(DbReference.COLUMN_NAME_MODEL_ADJECTIVES, adjstring)
         values.put(DbReference.COLUMN_NAME_MODEL_COLOR, entry.model.color)
 
@@ -133,7 +133,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
     }
 
     private object DbReference{
-        const val DATABASE_VERSION = 1
+        const val DATABASE_VERSION = 2
         const val DATABASE_NAME = "my_database.db"
 
         const val TABLE_NAME = "entry"
@@ -144,7 +144,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
 //        const val COLUMN_NAME_MODEL = "model"
 
         const val COLUMN_NAME_MODEL_NAME = "name"
-        const val COLUMN_NAME_MODEL_IMAGE = "image"
+        const val COLUMN_NAME_MODEL_IMAGEID = "imageId"
         const val COLUMN_NAME_MODEL_ADJECTIVES = "adjectives"
         const val COLUMN_NAME_MODEL_COLOR = "color"
 
@@ -153,9 +153,9 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
                     _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_NAME_DATE + " TEXT, " +
                     COLUMN_NAME_NOTES + " TEXT, " +
-                    COLUMN_NAME_MODEL_NAME + " TEXT" +
-                    COLUMN_NAME_MODEL_IMAGE + " TEXT" +
-                    COLUMN_NAME_MODEL_ADJECTIVES + " TEXT" +
+                    COLUMN_NAME_MODEL_NAME + " TEXT, " +
+                    COLUMN_NAME_MODEL_IMAGEID + " TEXT, " +
+                    COLUMN_NAME_MODEL_ADJECTIVES + " TEXT, " +
                     COLUMN_NAME_MODEL_COLOR + " TEXT )"
 
         const val DROP_TABLE_STATEMENT = "DROP TABLE IF EXISTS " + TABLE_NAME

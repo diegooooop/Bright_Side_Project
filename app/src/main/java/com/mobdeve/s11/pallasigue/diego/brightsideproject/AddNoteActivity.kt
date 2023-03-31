@@ -23,7 +23,7 @@ class AddNoteActivity : AppCompatActivity() {
         val name = intent.getStringExtra("Name")
         val adj = intent.getStringArrayExtra("Adjectives")
         val color = intent.getIntExtra("Color", 0)
-        var imageId = intent.getIntExtra("ImageId", 0)
+        val imageId = intent.getIntExtra("ImageId", 0)
 
         //dummy data
         val note = "I am happy"
