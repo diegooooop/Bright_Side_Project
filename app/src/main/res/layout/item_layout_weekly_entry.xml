@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/tv_logdate"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/rubik"
             android:layout_weight="1"
             android:gravity="center"
@@ -42,13 +42,13 @@
 
                 <ImageView
                     android:id="@+id/iv_logmood"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:paddingStart="15dp"
-                    android:paddingLeft="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingRight="15dp"
+                    android:paddingStart="60dp"
+                    android:paddingLeft="60dp"
+                    android:paddingEnd="60dp"
+                    android:paddingRight="60dp"
                     android:paddingBottom="10dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/angry" />

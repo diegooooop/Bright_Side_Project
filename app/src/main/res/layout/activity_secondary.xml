@@ -10,7 +10,6 @@
         android:id="@+id/Ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:orientation="vertical"
@@ -20,9 +19,14 @@
 
         <ImageView
             android:id="@+id/iconIv"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
+            android:paddingStart="80dp"
+            android:paddingLeft="80dp"
+            android:paddingEnd="80dp"
+            android:paddingRight="80dp"
             app:srcCompat="@drawable/logo" />
 
         <TextView
