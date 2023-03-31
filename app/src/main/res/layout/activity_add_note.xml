@@ -24,26 +24,35 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/rubik_medium"
-            android:text="Notes for Today"
+            android:text="Notebook"
             android:textColor="@color/yellow"
             android:textSize="34sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/notes" />
 
         <EditText
             android:id="@+id/et_note_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/yellow"
             android:ems="15"
-            android:gravity="center"
             android:fontFamily="@font/rubik_light"
-            android:hint="How was your day?"
+            android:gravity="center"
+            android:hint="My day was great because of brightside..."
             android:inputType="textMultiLine"
             android:lines="8"
-            android:minLines="4"
             android:maxLines="10"
+            android:minLines="1"
             android:scrollbars="vertical"
-            android:scrollHorizontally="false"/>
+            android:scrollHorizontally="false" />
 
         <Button
             android:id="@+id/btn_note_submit"
