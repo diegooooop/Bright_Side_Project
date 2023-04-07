@@ -13,13 +13,17 @@ class AllLogsActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     @RequiresApi(Build.VERSION_CODES.O)
-    private val allTime: ArrayList<EntryModel> = AlltimeDataGenerator.loadData()
     private lateinit var monthspin: Spinner
     private lateinit var yearspin: Spinner
+    private lateinit var myDbHelper: MyDbHelper
+    private lateinit var allTime: ArrayList<EntryModel>
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_all_logs)
+
+        myDbHelper = MyDbHelper.getInstance(this@AllLogsActivity)!!
+        this.allTime = myDbHelper.getAllEntriesDefault()
 
         val months = resources.getStringArray(R.array.Months)
         monthspin = findViewById(R.id.spr_month)
