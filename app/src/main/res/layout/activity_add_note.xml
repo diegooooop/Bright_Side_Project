@@ -38,21 +38,22 @@
 
         <EditText
             android:id="@+id/et_note_answer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="@color/yellow"
-            android:ems="15"
             android:fontFamily="@font/rubik_light"
             android:gravity="center"
             android:hint="My day was great because of brightside..."
             android:inputType="textMultiLine"
             android:lines="8"
-            android:maxLines="10"
+            android:maxLines="8"
             android:minLines="1"
-            android:scrollbars="vertical"
-            android:scrollHorizontally="false" />
+            android:padding="25dp"
+            android:singleLine="false" />
 
         <Button
             android:id="@+id/btn_note_submit"

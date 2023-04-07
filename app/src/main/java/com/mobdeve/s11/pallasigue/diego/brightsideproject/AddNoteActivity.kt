@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import androidx.annotation.RequiresApi
 import java.time.LocalDate
 
@@ -14,11 +15,14 @@ class AddNoteActivity : AppCompatActivity() {
     private lateinit var confirmBtn: Button
     private lateinit var myDbHelper: MyDbHelper
     private lateinit var mood: MoodModel
+    private lateinit var noteText: EditText
+    private lateinit var note: String
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_note)
+        noteText = findViewById(R.id.et_note_answer)
 
         val name = intent.getStringExtra("Name")
         val adj = intent.getStringArrayExtra("Adjectives")
@@ -26,7 +30,7 @@ class AddNoteActivity : AppCompatActivity() {
         val imageId = intent.getIntExtra("ImageId", 0)
 
         //dummy data
-        val note = "I am happy"
+
         val date = LocalDate.now()
 
         mood = name?.let { adj?.let { it1 -> MoodModel(it,imageId, it1,color) } }!!
@@ -34,13 +38,14 @@ class AddNoteActivity : AppCompatActivity() {
 
         confirmBtn = findViewById(R.id.btn_note_submit)
         confirmBtn.setOnClickListener(View.OnClickListener {
+            this.note = noteText.text.toString()
 
             myDbHelper = MyDbHelper.getInstance(this@AddNoteActivity)!!
             myDbHelper.insertEntry(
                 EntryModel(
                     date,
                     mood,
-                    note
+                    this.note
                 )
             )
 

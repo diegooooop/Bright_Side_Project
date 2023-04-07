@@ -91,7 +91,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         val database = this.writableDatabase
 
         val values = ContentValues()
-        values.put(DbReference.COLUMN_NAME_NOTES, entry.notes)
+        values.put(DbReference.COLUMN_NAME_NOTES, entry.notes.toString())
 
 //        Formatting date before inserting in database
         val current = entry.date
@@ -133,7 +133,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
     }
 
     private object DbReference{
-        const val DATABASE_VERSION = 2
+        const val DATABASE_VERSION = 3
         const val DATABASE_NAME = "my_database.db"
 
         const val TABLE_NAME = "entry"

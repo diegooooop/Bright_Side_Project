@@ -86,6 +86,7 @@
                     android:id="@+id/adjectives"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/blue"
                     android:fontFamily="@font/rubik_medium"
                     android:gravity="center"
@@ -116,12 +117,13 @@
                     android:id="@+id/notes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/purple"
+                    android:fontFamily="@font/rubik_medium"
                     android:gravity="center"
                     android:padding="3dp"
-                    android:fontFamily="@font/rubik_medium"
-                    android:background="@color/purple"
-                    android:textColor="@android:color/white"
                     android:text="Notes for the day:"
+                    android:textColor="@android:color/white"
                     android:textSize="18sp" />
 
                 <TextView
