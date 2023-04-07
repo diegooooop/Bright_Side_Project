@@ -17,23 +17,9 @@ class SecondaryActivity : AppCompatActivity() {
     private lateinit var userName: EditText
     private val prevStarted = "yes"
     private lateinit var name: String
-    override fun onResume() {
-        super.onResume()
-
-        val sharedPreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-
-        if (!sharedPreferences.getBoolean(prevStarted, false)) {
-            val editor = sharedPreferences.edit()
-            editor.putBoolean(prevStarted, true)
-            editor.apply()
-        }
-        else {
-            moveToSecondary()
-        }
-    }
 
     companion object {
-        var nameKey = "name_key"
+        const val nameKey = "name_key"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +32,7 @@ class SecondaryActivity : AppCompatActivity() {
             if(!userName.text.toString().isNullOrBlank()) {
                 name = userName.text.toString()
                 val i = Intent(this.applicationContext, HomePageActivity::class.java)
+                i.putExtra("name", name)
                 startActivity(i)
             }
             else{
@@ -54,6 +41,17 @@ class SecondaryActivity : AppCompatActivity() {
         })
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        val sp : SharedPreferences = getPreferences(Context.MODE_PRIVATE)
+
+        if (!sp.getBoolean(prevStarted, false)) {
+        }
+        else {
+            moveToSecondary()
+        }
+    }
     private fun moveToSecondary() {
         // use an intent to travel from one activity to another.
         val intent = Intent(this, HomePageActivity::class.java)
@@ -64,9 +62,10 @@ class SecondaryActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         name = userName.text.toString()
-        val sp : SharedPreferences = this.getSharedPreferences(getString(R.string.app_name),Context.MODE_PRIVATE)
+        val sp : SharedPreferences = getPreferences(Context.MODE_PRIVATE)
         val editor : SharedPreferences.Editor = sp.edit()
-        editor.putString(SecondaryActivity.nameKey, name)
+        editor.putString(nameKey, userName.text.toString())
+        editor.putBoolean(prevStarted, true)
         editor.apply()
     }
 }

@@ -23,7 +23,6 @@ class HomePageActivity : AppCompatActivity() {
     private lateinit var weekBtn: Button
     private lateinit var logsBtn: Button
     private lateinit var settings: ImageButton
-    private lateinit var nameValue: String
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +37,7 @@ class HomePageActivity : AppCompatActivity() {
 
         //set the greetings to the username given
         homeName = findViewById(R.id.tv_home_name)
-//        val username = intent.getStringExtra("name")
+
 
 
         //load affirmation pic
@@ -73,15 +72,16 @@ class HomePageActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val sp : SharedPreferences = this.getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
-        nameValue = sp.getString(SecondaryActivity.nameKey, "none").toString()
-        homeName.text = nameValue
-    }
-    override fun onPause() {
-        super.onPause()
-        val sp : SharedPreferences = this.getSharedPreferences(getString(R.string.app_name),Context.MODE_PRIVATE)
-        val editor : SharedPreferences.Editor = sp.edit()
-        editor.putString(SecondaryActivity.nameKey, nameValue)
-        editor.apply()
+        val sp : SharedPreferences = getSharedPreferences("SettingsActivity", Context.MODE_PRIVATE)
+        val nameValue = sp.getString("name", "test")
+        if(nameValue == "test")
+        {
+            val username = intent.getStringExtra("name")
+            homeName.text = username
+        }
+        else{
+            homeName.text = nameValue
+        }
+
     }
 }
