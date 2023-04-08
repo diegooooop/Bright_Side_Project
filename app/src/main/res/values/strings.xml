@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Bright Side Project</string>
     <string-array name="Months">
+        <item>All</item>
         <item>January</item>
         <item>February</item>
         <item>March</item>
@@ -16,9 +17,10 @@
     </string-array>
     <string-array name="Years">
         <item>2023</item>
-        <item>2022</item>
-        <item>2021</item>
-        <item>2020</item>
-        <item>2019</item>
+        <item>2024</item>
+    </string-array>
+    <string-array name="Sort">
+        <item>Ascending</item>
+        <item>Descending</item>
     </string-array>
 </resources>

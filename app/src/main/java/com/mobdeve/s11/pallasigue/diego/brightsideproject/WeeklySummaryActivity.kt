@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
+import java.time.ZoneId
+import java.util.*
+import kotlin.collections.ArrayList
 
 class WeeklySummaryActivity : AppCompatActivity() {
 
@@ -24,8 +27,19 @@ class WeeklySummaryActivity : AppCompatActivity() {
         myDbHelper = MyDbHelper.getInstance(this@WeeklySummaryActivity)!!
         this.week = myDbHelper.getAllEntriesDefault()
 
+        // Get the start and end dates of the current week
+        val calendar = Calendar.getInstance()
+        calendar.firstDayOfWeek = Calendar.MONDAY
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+        val startDate = calendar.time.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY)
+        val endDate = calendar.time.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+
+// Filter the list of objects based on their LocalDate property
+        val filteredList = week.filter { obj -> obj.date in startDate..endDate }
+
         this.recyclerView = findViewById(R.id.rv_days)
-        this.recyclerView.adapter = AdapterWeek(this.week)
+        this.recyclerView.adapter = AdapterWeek(filteredList as ArrayList<EntryModel>)
 
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
