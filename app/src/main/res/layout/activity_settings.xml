@@ -4,106 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@color/light_purple"
     tools:context=".SettingsActivity">
 
-    <LinearLayout
-        android:id="@+id/daily_reminderLl"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/set_reminderTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/rubik_medium"
-            android:gravity="center"
-            android:text="Notification Settings"
-            android:textColor="@color/yellow"
-            android:textSize="34sp" />
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
         <LinearLayout
+            android:id="@+id/daily_reminderLl"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/set_reminderTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="Notification Settings"
+                android:textColor="@color/yellow"
+                android:textSize="34sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Name"
-                android:textColor="#FEB651"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/name_ET"
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Name"
+                    android:textColor="#FEB651"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/name_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp">
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:fontFamily="@font/rubik"
+                    android:layoutDirection="rtl"
+                    android:switchPadding="10dp"
+                    android:text="Set Daily Reminder Time"
+                    android:thumbTint="@color/green"
+                    android:trackTint="#8DD590" />
+
+                <EditText
+                    android:id="@+id/timeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:text="10:00 PM" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:onClick="createNotification"
+                android:text="confirm"
+                android:textColor="@android:color/white"
+                app:cornerRadius="48dp" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="50dp"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="20dp">
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="true"
-                android:enabled="true"
-                android:fontFamily="@font/rubik"
-                android:layoutDirection="rtl"
-                android:switchPadding="10dp"
-                android:text="Set Daily Reminder Time"
-                android:thumbTint="@color/green"
-                android:trackTint="#8DD590" />
-
-            <EditText
-                android:id="@+id/timeEt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:fontFamily="@font/rubik"
-                android:gravity="center"
-                android:inputType="time"
-                android:text="10:00 PM" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/confirmBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:onClick="createNotification"
-            android:fontFamily="@font/rubik_medium"
-            android:text="confirm"
-            android:textColor="@android:color/white"
-            app:cornerRadius="48dp" />
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
