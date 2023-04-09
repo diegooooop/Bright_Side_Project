@@ -16,14 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/right_bgIv"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/side_background_gradient" />
+            app:srcCompat="@drawable/right_side_background_gradient" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -102,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/rubik_medium"
+        android:padding="15dp"
         android:text="Confirm"
         android:textColor="@android:color/white"
         app:cornerRadius="48dp"

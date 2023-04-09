@@ -4,62 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@color/light_purple"
     tools:context=".AddNoteActivity">
 
-    <LinearLayout
-        android:id="@+id/ll_notes"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_note_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/rubik_medium"
-            android:text="Notebook"
-            android:textColor="@color/yellow"
-            android:textSize="34sp" />
-
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            app:srcCompat="@drawable/notes" />
+            android:id="@+id/top_bgIv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_background_gradient" />
 
-        <EditText
-            android:id="@+id/et_note_answer"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/yellow"
-            android:fontFamily="@font/rubik_light"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:hint="My day was great because of brightside..."
-            android:inputType="textMultiLine"
-            android:singleLine="false" />
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btn_note_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/rubik_medium"
-            android:text="Submit"
-            android:textColor="@android:color/white"
-            app:cornerRadius="48dp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_note_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Notebook"
+                android:layout_gravity="start"
+                android:textColor="@android:color/white"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                app:srcCompat="@drawable/notes" />
+
+            <EditText
+                android:id="@+id/et_note_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="@font/rubik_light"
+                android:gravity="center"
+                android:hint="My day was great because of brightside..."
+                android:inputType="textMultiLine"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/btn_note_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                app:cornerRadius="48dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
