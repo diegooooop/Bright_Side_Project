@@ -66,18 +66,17 @@ class SettingsActivity : AppCompatActivity() {
 
         confbtn = findViewById(R.id.confirmBtn)
         confbtn.setOnClickListener(View.OnClickListener {
-//            if(time.isEnabled && time.isClickable && time.isActivated)
-//            {
-                val timeString = time.text.toString()
-            Log.d(TAG, "time is $timeString")
+           if(switch.isChecked) {
+               val timeString = time.text.toString()
+               Log.d(TAG, "time is $timeString")
 
-                val parts = timeString.trim().split(":")
+               val parts = timeString.trim().split(":")
 
-                val hour = parts[0].toInt()
-                val minute = parts[1].toInt()
-                this.scheduleNotification(hour, minute)
-                Log.d(TAG, "hours is $hour, minutes is $minute")
-            //}
+               val hour = parts[0].toInt()
+               val minute = parts[1].toInt()
+               this.scheduleNotification(hour, minute)
+               Log.d(TAG, "hours is $hour, minutes is $minute")
+           }
             val i = Intent(applicationContext, HomePageActivity::class.java)
             startActivity(i)
             finish()
@@ -102,10 +101,12 @@ class SettingsActivity : AppCompatActivity() {
         else {
             nameEt.setText(nameValue.toString())
             time.setText(0)
-            time.isEnabled = false
-            time.isClickable = false
-            time.isActivated = false
         }
+        val check = sp.getBoolean("checked", false)
+        switch.isChecked = check
+        time.isEnabled = check
+        time.isClickable = check
+        time.isActivated = check
     }
 
     override fun onPause() {
@@ -119,6 +120,7 @@ class SettingsActivity : AppCompatActivity() {
         val editor : SharedPreferences.Editor = sp.edit()
         editor.putString("name",nameEt.text.toString())
         editor.putLong("time",timeInMillis)
+        editor.putBoolean("checked", switch.isChecked)
         editor.apply()
     }
     @SuppressLint("ServiceCast")
@@ -154,6 +156,6 @@ class SettingsActivity : AppCompatActivity() {
 
 //        notificationManager.notify(NOTIFICATION_ID, builder.build())
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, PendingIntent.getBroadcast(applicationContext, 0, Intent(applicationContext, MyNotificationReceiver::class.java), PendingIntent.FLAG_UPDATE_CURRENT))
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis,  AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(applicationContext, 0, Intent(applicationContext, MyNotificationReceiver::class.java), PendingIntent.FLAG_UPDATE_CURRENT))
     }
 }
