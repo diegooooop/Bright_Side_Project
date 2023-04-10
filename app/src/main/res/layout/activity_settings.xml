@@ -103,7 +103,7 @@
                     android:checked="true"
                     android:enabled="true"
                     android:textSize="16sp"
-                    android:fontFamily="@font/rubik_medium"
+                    android:fontFamily="@font/rubik"
                     android:layoutDirection="rtl"
                     android:switchPadding="10dp"
                     android:text="Set Daily Reminder Time"
