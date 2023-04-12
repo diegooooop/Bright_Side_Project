@@ -18,7 +18,7 @@
             android:id="@+id/tv_logdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/rubik_medium"
+            android:fontFamily="@font/rubik"
             android:gravity="center"
             android:text="Wednesday, March 29, 2023"
             android:textSize="26sp" />
