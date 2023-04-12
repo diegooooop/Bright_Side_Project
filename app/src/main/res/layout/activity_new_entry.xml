@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -45,17 +45,17 @@
                 android:id="@+id/tv_entry_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/rubik_medium"
                 android:gravity="center"
                 android:text="How are you feeling today?"
                 android:textColor="@android:color/white"
-                android:textSize="34sp" />
+                android:textSize="26sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_adjective"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
