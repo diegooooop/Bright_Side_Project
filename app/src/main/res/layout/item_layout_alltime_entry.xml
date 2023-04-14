@@ -75,7 +75,7 @@
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/sample" />
+                    app:srcCompat="@drawable/angry" />
 
                 <TextView
                     android:id="@+id/setText"

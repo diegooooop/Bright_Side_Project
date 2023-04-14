@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import java.time.LocalDate
 import java.util.*
 import kotlin.collections.ArrayList
-
+/*the code that was used for dummy date of alltimedata activity*/
 class AlltimeDataGenerator {
     companion object {
         @RequiresApi(Build.VERSION_CODES.O)
@@ -15,7 +15,7 @@ class AlltimeDataGenerator {
             data.add(
                 EntryModel(
                     LocalDate.of(2023,3,1),
-                    MoodModel("Happy", R.drawable.sample, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                    MoodModel("Happy", R.drawable.angry, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
                         color = Color.parseColor("#F8EACD")),
                     "There will be a makeup test this Friday!"))
             data.add(
@@ -33,13 +33,13 @@ class AlltimeDataGenerator {
             data.add(
                 EntryModel(
                     LocalDate.of(2023,3,4),
-                    MoodModel("Confused", R.drawable. confused,adjectives = arrayOf<String>("Puzzled", "Disoriented"),
+                    MoodModel("Confused", R.drawable.confused,adjectives = arrayOf<String>("Puzzled", "Disoriented"),
                         color = Color.parseColor("#C7E1F8")),
                     "I am overwhelmed with the things I need to do"))
             data.add(
                 EntryModel(
                     LocalDate.of(2023,3,5),
-                    MoodModel("Happy", R.drawable.sample, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                    MoodModel("Happy", R.drawable.angry, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
                         color = Color.parseColor("#F8EACD")),
                     "There will be a makeup test this Friday!"))
             data.add(

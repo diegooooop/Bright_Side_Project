@@ -31,7 +31,7 @@ class WeeklyDataGenerator {
             data.add(
                 EntryModel(
                     LocalDate.of(2023,3,24),
-                    MoodModel("Happy", R.drawable.sample, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
+                    MoodModel("Happy", R.drawable.happy, adjectives = arrayOf<String>("Cheerful", "Ecstatic", "Grateful"),
                         color = Color.parseColor("#F8EACD")),
                     "There will be a makeup test this Friday!"))
             data.add(

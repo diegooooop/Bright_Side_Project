@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.time.Month
 import java.time.Year
 
+/* this activity is for the all logs activity which shows all the entries */
 class AllLogsActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
@@ -29,9 +30,11 @@ class AllLogsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_all_logs)
 
+        /* code to query from the database */
         myDbHelper = MyDbHelper.getInstance(this@AllLogsActivity)!!
         this.allTime = myDbHelper.getAllEntriesDefault()
 
+        /* setting up the month spinner */
         val months = resources.getStringArray(R.array.Months)
         monthspin = findViewById(R.id.spr_month)
         if (monthspin != null){
@@ -39,6 +42,7 @@ class AllLogsActivity : AppCompatActivity() {
             monthspin.adapter = adapter
         }
 
+        /* setting up the year spinner */
         val years = resources.getStringArray(R.array.Years)
         yearspin = findViewById(R.id.spr_year)
         if (yearspin != null){
@@ -46,6 +50,7 @@ class AllLogsActivity : AppCompatActivity() {
             yearspin.adapter = adapter2
         }
 
+        /* setting up the sort spinner */
         val sort = resources.getStringArray(R.array.Sort)
         sortSpin = findViewById(R.id.spr_sort)
         if (sortSpin != null){
@@ -57,6 +62,7 @@ class AllLogsActivity : AppCompatActivity() {
         this.recyclerView.adapter = AdapterAllTime(this.allTime)
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
+        /* this is the code for sorting the entries (according to year)*/
         yearspin.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedMonth = monthspin.selectedItem as? String
@@ -81,7 +87,7 @@ class AllLogsActivity : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
         }
-
+        /* for sorting according to month*/
         monthspin.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedMonthValue = parent.getItemAtPosition(position).toString()
@@ -107,7 +113,7 @@ class AllLogsActivity : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
-
+        /* code for sorting ascending or descending */
         fun sortObjectsList(allData: ArrayList<EntryModel>, option: String): MutableList<EntryModel> {
             val sortedList = allData.toMutableList()
             when (option) {

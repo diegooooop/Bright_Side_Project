@@ -13,6 +13,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.random.Random
+
+/* The activity for choosing the activities the user will do*/
 class HomePageActivity : AppCompatActivity() {
 
     //generate affirmation array

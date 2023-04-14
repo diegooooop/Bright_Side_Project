@@ -1,14 +1,14 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import android.graphics.Color
-
+/*This data generator is for the moods that will be used in the main activity*/
 class DataGenerator {
         companion object {
             fun loadData(): ArrayList<MoodModel> {
                 val data = ArrayList<MoodModel>()
                 data.add(MoodModel(
                     "Happy",
-                    R.drawable.sample,
+                    R.drawable.happy,
                     adjectives = arrayOf<String>("Joyful", "Cheerful", "Delighted", "Pleased", "Ecstatic", "Blissful", "Elated", "Grateful", "Content", "Overjoyed"),
                     color = Color.parseColor("#FCB53A")))
 

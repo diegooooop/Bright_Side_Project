@@ -2,7 +2,7 @@ package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
 import java.time.LocalDate
 import java.util.*
-
+/* Entry model is the individual entries of the users */
 class EntryModel {
     var date: LocalDate
     private set

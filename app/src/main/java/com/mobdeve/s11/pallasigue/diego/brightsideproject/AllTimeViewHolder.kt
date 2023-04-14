@@ -14,7 +14,7 @@ import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.RecyclerView
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
-
+/* this viewholder is for the layout of alltime activity */
 class AllTimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val mood: ImageView = itemView.findViewById(R.id.iv_mood)
     private val day: TextView = itemView.findViewById(R.id.tv_day)
@@ -66,7 +66,7 @@ class AllTimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         }
         adjective.text = text
     }
-
+    /* function from changing dp to px*/
     fun Int.dpToPx(context: Context): Int {
         return TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,

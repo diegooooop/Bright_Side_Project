@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
+/* this adapter is for setting up the moods for adapter  */
 class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<MoodViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoodViewHolder {
@@ -14,6 +15,7 @@ class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<
 
         val myViewHolder = MoodViewHolder(view)
         myViewHolder.itemView.setOnClickListener{
+            /* creates an intent to send the mood model contents to send onclick */
             val i = Intent(myViewHolder.itemView.context, Adjectives::class.java)
             i.putExtra("Name", data[myViewHolder.adapterPosition].name)
             i.putExtra("ImageId", data[myViewHolder.adapterPosition].imageId)
@@ -25,11 +27,11 @@ class AdapterMood(private val data: ArrayList<MoodModel>): RecyclerView.Adapter<
 
         return myViewHolder
     }
-
+    /* standard onBindViewHolder */
     override fun onBindViewHolder(holder: MoodViewHolder, position: Int) {
         holder.bindData(data[position])
     }
-
+    /* standard function for returning item size */
     override fun getItemCount(): Int {
         return data.size
     }

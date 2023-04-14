@@ -17,6 +17,7 @@ import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+/* viewholder for adjectives */
 class AdjectiveViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val adjective: CheckBox = itemView.findViewById(R.id.btn_adjective)
     val background: LinearLayout = itemView.findViewById(R.id.rounded_layout)
@@ -26,16 +27,16 @@ class AdjectiveViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val gradientDrawable = GradientDrawable()
 
         adjective.text = data
-
         adjective.buttonTintList = ColorStateList.valueOf(color)
 
+        /* code for getting the lighter version of the set color */
         gradientDrawable.shape = GradientDrawable.RECTANGLE
         gradientDrawable.cornerRadius = 20.dpToPx(itemView.context).toFloat()
         gradientDrawable.setColor(lighterColor)
         background.background = gradientDrawable
 
     }
-
+    /* change unit from dp to px */
     fun Int.dpToPx(context: Context): Int {
         return TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
