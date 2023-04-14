@@ -2,27 +2,42 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_Layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
 
-    <CheckBox
-        android:id="@+id/btn_adjective"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/rounded_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:buttonTint="#C8FF9800"
-        android:clickable="true"
-        android:focusable="true"
-        android:drawableTint="#2BB336"
-        android:enabled="true"
-        android:gravity="center"
-        android:fontFamily="@font/rubik"
-        android:textAllCaps="true"
-        android:text="Excited"
-        android:textColor="#C8000000"
-        app:buttonIconTint="#C8FF9800"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/rounded_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="3dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/btn_adjective"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#C8FF9800"
+            android:clickable="true"
+            android:drawableTint="#2BB336"
+            android:enabled="true"
+            android:focusable="true"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="Excited"
+            android:textAllCaps="true"
+            android:textColor="#C8000000"
+            app:buttonIconTint="#C8FF9800" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

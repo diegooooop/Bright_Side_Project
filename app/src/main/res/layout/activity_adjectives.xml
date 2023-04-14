@@ -2,29 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_purple"
     tools:context=".Adjectives">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/top_bgIv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/top_background_gradient" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,37 +23,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tv_adjective_title"
+            <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="50dp"
-                android:gravity="center"
-                android:fontFamily="@font/rubik_medium"
-                android:shadowColor="@android:color/white"
-                android:text="Describe Your Day"
-                android:textColor="@android:color/white"
-                android:textSize="34sp" />
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                app:srcCompat="@drawable/adjectives_icon" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_adjective"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="left"
-                android:layout_margin="5dp"
-                android:foregroundGravity="left"/>
+                android:layout_weight="7"
+                android:foregroundGravity="left" />
 
             <Button
                 android:id="@+id/btn_adjective_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:padding="15dp"
+                android:layout_weight="0"
                 android:fontFamily="@font/rubik_medium"
                 android:text="Confirm"
                 android:textColor="@android:color/white"
-                app:cornerRadius="48dp"/>
+                app:cornerRadius="48dp" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

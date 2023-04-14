@@ -14,27 +14,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_logdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rubik"
-            android:gravity="center"
-            android:text="Wednesday, March 29, 2023"
-            android:textSize="26sp" />
-
         <LinearLayout
             android:id="@+id/ll_contententry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:background="@drawable/rounded_background">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_logdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="March 29, 2023"
+                    android:textColor="#D1C4BA"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_logday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="WEDNESDAY"
+                    android:textColor="@color/blue"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/iv_logmood"
@@ -55,8 +70,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:gravity="bottom|center"
-                    android:text="You felt"
-                    android:textSize="22sp" />
+                    android:text="you felt"
+                    android:textColor="#D1C4BA"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_moodname"
@@ -65,8 +81,10 @@
                     android:fontFamily="@font/rubik_bold"
                     android:gravity="center_horizontal"
                     android:text="ANGRY"
+                    android:textColor="@android:color/holo_red_light"
                     android:textSize="46sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -98,6 +116,7 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="center"
                     android:text="Insert AdjectivesInsert AdjectivesInsert AdjectivesInsert AdjectivesInsert AdjectivesInsert AdjectivesInsert Adjectives"
+                    android:textColor="#D1C4BA"
                     android:textSize="16sp"
                     android:textStyle="normal" />
 
@@ -114,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:background="@color/purple"
+                    android:background="@color/blue"
                     android:fontFamily="@font/rubik_medium"
                     android:gravity="center"
                     android:padding="3dp"
@@ -129,6 +148,7 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="center"
                     android:text="Insert NotesInsert NotesInsert NotesInsert NotesInsert NotesInsert NotesInsert NotesInsert NotesInsert NotesInsert Notes"
+                    android:textColor="#D1C4BA"
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>

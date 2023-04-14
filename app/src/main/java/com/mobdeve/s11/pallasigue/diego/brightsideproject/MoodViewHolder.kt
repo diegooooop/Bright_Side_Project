@@ -1,10 +1,15 @@
 package com.mobdeve.s11.pallasigue.diego.brightsideproject
 
+import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.text.Layout
+import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,8 +20,25 @@ class MoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     fun bindData(data: MoodModel)
     {
-        moodBox.setBackgroundColor(data.color)
+        val lighterColor = ColorUtils.blendARGB(data.color, Color.WHITE, 0.8f)
+        val gradientDrawable = GradientDrawable()
+
+        gradientDrawable.shape = GradientDrawable.RECTANGLE
+        gradientDrawable.cornerRadius = 10.dpToPx(itemView.context).toFloat()
+        gradientDrawable.setStroke(2.dpToPx(itemView.context), data.color)
+        gradientDrawable.setColor(lighterColor)
+        moodBox.background = gradientDrawable
+
         emoji.setImageResource(data.imageId)
+        name.setTextColor(data.color)
         name.text = data.name
+    }
+
+    fun Int.dpToPx(context: Context): Int {
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            this.toFloat(),
+            context.resources.displayMetrics
+        ).toInt()
     }
 }

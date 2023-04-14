@@ -9,13 +9,13 @@
 
     <LinearLayout
         android:id="@+id/ll_moodBox"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_new_entry"
         android:gravity="center"
+        android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:paddingStart="5dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,10 +23,9 @@
 
         <ImageView
             android:id="@+id/iv_emoji"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_weight="3"
+            android:layout_width="175dp"
+            android:layout_height="159dp"
+            android:layout_weight="5"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/confused" />
@@ -34,14 +33,14 @@
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/rubik_medium"
-            android:paddingTop="20dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="TextView"
-            android:textSize="16sp" />
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

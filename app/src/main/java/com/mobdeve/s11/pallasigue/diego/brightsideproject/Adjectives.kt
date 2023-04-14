@@ -27,7 +27,7 @@ class Adjectives : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_adjectives)
-        nameTV = findViewById(R.id.tv_adjective_title)
+//        nameTV = findViewById(R.id.tv_adjective_title)
         confirmBtn = findViewById(R.id.btn_adjective_confirm)
 
         val name = intent.getStringExtra("Name")
