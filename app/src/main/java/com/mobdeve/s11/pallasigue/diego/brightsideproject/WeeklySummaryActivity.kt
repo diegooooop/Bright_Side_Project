@@ -12,6 +12,7 @@ import java.time.ZoneId
 import java.util.*
 import kotlin.collections.ArrayList
 
+/* This activity is for showing the weekly logs of the user*/
 class WeeklySummaryActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
@@ -24,6 +25,7 @@ class WeeklySummaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weekly_summary)
 
+        /* Query from the database */
         myDbHelper = MyDbHelper.getInstance(this@WeeklySummaryActivity)!!
         this.week = myDbHelper.getAllEntriesDefault()
 

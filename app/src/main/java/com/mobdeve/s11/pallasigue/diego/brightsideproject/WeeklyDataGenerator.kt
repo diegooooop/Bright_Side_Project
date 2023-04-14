@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import java.time.LocalDate
 
+/* Generate a dummy data that was used for the weekly logs */
 class WeeklyDataGenerator {
     companion object {
         @RequiresApi(Build.VERSION_CODES.O)

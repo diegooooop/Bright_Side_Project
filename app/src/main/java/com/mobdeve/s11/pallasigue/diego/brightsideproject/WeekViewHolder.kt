@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
+/* This viewholder is for populating the weekly entry layout*/
 class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val date: TextView = itemView.findViewById(R.id.tv_logdate)
     private val day: TextView = itemView.findViewById(R.id.tv_logday)
@@ -65,6 +66,7 @@ class WeekViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         notes.text = data.notes
 //        bgcolor.setBackgroundColor(data.model.color)
 
+        /* this code is for assigning a string to the adjective textview */
         var i = data.model.adjectives.size-1
 
         var text = " " 

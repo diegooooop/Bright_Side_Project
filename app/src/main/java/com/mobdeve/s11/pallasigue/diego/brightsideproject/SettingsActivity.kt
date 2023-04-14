@@ -40,7 +40,7 @@ class SettingsActivity : AppCompatActivity() {
         switch = findViewById(R.id.switch1)
         time = findViewById(R.id.timeEt)
         nameEt = findViewById(R.id.name_ET)
-
+        /* code for setting the switch for enabling or disabling setting time for notification */
         switch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
             // do something, the isChecked will be
             // true if the switch is in the On position
@@ -56,7 +56,7 @@ class SettingsActivity : AppCompatActivity() {
             }
 
         })
-
+        /* This code pops up a time picker dialog upon clicking the time edittext box*/
        time.setOnClickListener(View.OnClickListener {
            var picker = TimePickerDialog(this@SettingsActivity,
                { tp, sHour, sMinute -> time.setText("$sHour:$sMinute ") },  0, 0, false
@@ -69,7 +69,7 @@ class SettingsActivity : AppCompatActivity() {
            if(switch.isChecked) {
                val timeString = time.text.toString()
                Log.d(TAG, "time is $timeString")
-
+                /* this code splits the hour and minutes from the set time*/
                val parts = timeString.trim().split(":")
 
                val hour = parts[0].toInt()
@@ -86,6 +86,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onStart()
         val sp : SharedPreferences = getSharedPreferences("SecondaryActivity", Context.MODE_PRIVATE)
         val nameValue = sp.getString(SecondaryActivity.nameKey, "test")
+        /* code for intiializing the name and setting the saved hours and minutes of the time */
         if(nameValue == "")
         {
             val s : SharedPreferences = getSharedPreferences("SettingsActivity", Context.MODE_PRIVATE)
@@ -109,6 +110,7 @@ class SettingsActivity : AppCompatActivity() {
         time.isActivated = check
     }
 
+    /* This function saves the input using sharedpreference on the name textbox and time textbox*/
     override fun onPause() {
         super.onPause()
         val timeString = time.text.toString() // get the text from the EditText
@@ -123,6 +125,8 @@ class SettingsActivity : AppCompatActivity() {
         editor.putBoolean("checked", switch.isChecked)
         editor.apply()
     }
+
+    /* This function sets the notification time based on the hour and minutes set in the edittexts*/
     @SuppressLint("ServiceCast")
     fun scheduleNotification(hour: Int, minute: Int) {
         val calendar = Calendar.getInstance()
@@ -131,26 +135,6 @@ class SettingsActivity : AppCompatActivity() {
         calendar.set(Calendar.SECOND, 0) // Second of the minute
         calendar.timeInMillis
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//            // Create the notification channel
-//            val name = "My Notification Channel"
-//            val descriptionText = "This is my notification channel"
-//            val importance = NotificationManager.IMPORTANCE_DEFAULT
-//            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
-//                description = descriptionText
-//            }
-//
-//            // Register the notification channel with the system
-//            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-//            //notificationManager.createNotificationChannel(channel)
-//        }
-
-//        val builder = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
-//            .setSmallIcon(R.drawable.ic_notification)
-//            .setContentTitle("My Notification")
-//            .setContentText("This is my notification.")
-//            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-//            .setAutoCancel(true)
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 

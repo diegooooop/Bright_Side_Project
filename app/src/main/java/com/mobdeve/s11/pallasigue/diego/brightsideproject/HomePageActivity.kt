@@ -76,6 +76,7 @@ class HomePageActivity : AppCompatActivity() {
         super.onStart()
         val sp : SharedPreferences = getSharedPreferences("SettingsActivity", Context.MODE_PRIVATE)
         val nameValue = sp.getString("name", "test")
+        /* Code for setting up the name */
         if(nameValue == "test")
         {
             val username = intent.getStringExtra("name")

@@ -8,6 +8,7 @@ import android.os.Looper
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 
+/* This activity is shown upon first entry of the application to welcome the user and ask for the name of the user */
 @Suppress("DEPRECATION")
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

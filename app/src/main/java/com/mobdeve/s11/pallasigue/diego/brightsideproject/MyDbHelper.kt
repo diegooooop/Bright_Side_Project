@@ -33,7 +33,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         sqLiteDatabase.execSQL(DbReference.DROP_TABLE_STATEMENT)
         onCreate(sqLiteDatabase)
     }
-
+    /* function for querying into the database */
     @RequiresApi(Build.VERSION_CODES.O)
     fun getAllEntriesDefault(): ArrayList<EntryModel>{
         val database: SQLiteDatabase = this.readableDatabase
@@ -55,18 +55,22 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         while(c.moveToNext()){
 //            var blob = c.getBlob(c.getColumnIndexOrThrow((DbReference.COLUMN_NAME_MODEL)))
 
+            /* Code to format the localdate variable into MM,DD,YYYY and Day*/
             val current = c.getString(c.getColumnIndexOrThrow((DbReference.COLUMN_NAME_DATE)))
             val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)
             val formatted = LocalDate.parse(current, formatter)
 
+            /* getting the following columns and storing it into a variable */
             val name = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_NAME))
             val adj = c.getString(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_ADJECTIVES))
             val imageID = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_IMAGEID))
             val color = c.getInt(c.getColumnIndexOrThrow(DbReference.COLUMN_NAME_MODEL_COLOR))
 
+            /* This is for splitting the adjective of string into an array based on the delimiter which is " " */
             val adjectiveArray: Array<String>
             adjectiveArray = adj.split("[ ,]").toTypedArray()
 
+            /*creates a moodObject variable that is of mood model*/
             val moodObject: MoodModel
             moodObject = MoodModel(name,imageID, adjectiveArray,color)
 
@@ -85,6 +89,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         return entry
     }
 
+    /* Function for inserting data into the database */
     @RequiresApi(Build.VERSION_CODES.O)
     fun insertEntry(entry: EntryModel){
 
@@ -98,7 +103,7 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)
         val formatted = current.format(formatter)
         values.put(DbReference.COLUMN_NAME_DATE, formatted)
-
+        /* Transforming the array of string in model: adjectives into a single string*/
         val adjstring = entry.model.adjectives.joinToString()
         values.put(DbReference.COLUMN_NAME_MODEL_NAME, entry.model.name)
         values.put(DbReference.COLUMN_NAME_MODEL_IMAGEID, entry.model.imageId)
@@ -112,26 +117,8 @@ class MyDbHelper(context: Context?) : SQLiteOpenHelper(context, DbReference.DATA
         database.close()
     }
 
-    fun makebyte(modeldata: MoodModel): ByteArray? {
-        try {
-            val baos = ByteArrayOutputStream()
-            val oos = ObjectOutputStream(baos)
-            oos.writeObject(modeldata)
-            val employeeAsBytes: ByteArray = baos.toByteArray()
-            val bais = ByteArrayInputStream(employeeAsBytes)
-            return employeeAsBytes
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return null
-    }
 
-    fun read(data: ByteArray?): MoodModel {
-            val baip = ByteArrayInputStream(data)
-            val ois = ObjectInputStream(baip)
-            return ois.readObject() as MoodModel
-    }
-
+    /* The dbreference for constant and consistent volumn names for the database*/
     private object DbReference{
         const val DATABASE_VERSION = 3
         const val DATABASE_NAME = "my_database.db"

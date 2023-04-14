@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.internal.ContextUtils
 import kotlin.collections.ArrayList
 
+/* This main activity is for the user to choose the mood for entrymodel */
 class MainActivity : AppCompatActivity() {
-
+    /* variable that sets up the mood defined in the mood model */
     private val mood: ArrayList<MoodModel> = DataGenerator.loadData()
     private lateinit var recyclerView: RecyclerView
     @SuppressLint("RestrictedApi")

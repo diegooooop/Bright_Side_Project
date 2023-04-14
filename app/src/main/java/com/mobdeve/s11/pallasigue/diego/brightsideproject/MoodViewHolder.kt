@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+/* the moodview holder is the viewholder that populates the layout for moods in mainactivity */
 class MoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val moodBox: LinearLayout = itemView.findViewById(R.id.ll_moodBox)
     private val emoji: ImageView = itemView.findViewById(R.id.iv_emoji)
@@ -23,6 +23,7 @@ class MoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val lighterColor = ColorUtils.blendARGB(data.color, Color.WHITE, 0.8f)
         val gradientDrawable = GradientDrawable()
 
+        /* this code configures the color for the background of the linear layout for the mood */
         gradientDrawable.shape = GradientDrawable.RECTANGLE
         gradientDrawable.cornerRadius = 10.dpToPx(itemView.context).toFloat()
         gradientDrawable.setStroke(2.dpToPx(itemView.context), data.color)
@@ -34,6 +35,7 @@ class MoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         name.text = data.name
     }
 
+    /* function to change dp to px*/
     fun Int.dpToPx(context: Context): Int {
         return TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
