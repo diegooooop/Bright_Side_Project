@@ -12,7 +12,7 @@
         android:layout_margin="20dp">
 
         <LinearLayout
-            android:id="@+id/ll_notes"
+            android:id="@+id/ll_notesIcon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iv_notes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
