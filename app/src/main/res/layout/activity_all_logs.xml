@@ -45,11 +45,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/rubik_bold"
-                android:gravity="center"
-                android:text="All-time data"
-                android:textColor="@android:color/white"
-                android:textSize="34sp" />
+                android:fontFamily="@font/rubik_bold"></TextView>
+
 
             <LinearLayout
                 android:id="@+id/ll_filters"
